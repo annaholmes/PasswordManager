@@ -4,7 +4,7 @@ public class Tuple<E> {
     private E first;
     private E second;
 
-    public Tuple(E first, E second) {
+    public Tuple() {
         this.first = first;
         this.second = second;
     }

@@ -1,18 +1,10 @@
 package Unsorted;
-import javafx.event.ActionEvent;
-import javafx.event.EventHandler;
 import javafx.fxml.FXML;
-import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
-import javafx.scene.control.cell.PropertyValueFactory;
-import javafx.scene.layout.VBox;
-import javafx.stage.Modality;
-import javafx.stage.Stage;
 
-import javax.xml.crypto.Data;
 import java.util.ArrayList;
 
 
@@ -83,7 +75,7 @@ public class Controller {
     @FXML
     private void addPassword() {
         // TODO  make sure there is something in labelField & passwordField & that labelField is unique in this.data
-        database.addPassword(new Tuple<String>(labelField.getText(), passwordField.getText()));
+        database.addPassword(new Tuple<String>());
     }
 
     @FXML
