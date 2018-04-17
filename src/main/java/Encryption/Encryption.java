@@ -1,6 +1,6 @@
 package Encryption;
 
-import Unsorted.Tuple;
+/*import Unsorted.Tuple;
 
 import javax.crypto.BadPaddingException;
 import javax.crypto.Cipher;
@@ -41,4 +41,4 @@ public class Encryption {
         return output;
 
     }
-}
+}*/
