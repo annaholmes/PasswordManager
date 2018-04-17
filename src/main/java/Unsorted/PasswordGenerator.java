@@ -1,3 +1,5 @@
+package Unsorted;
+
 public class PasswordGenerator {
 
     private int maxLength;
