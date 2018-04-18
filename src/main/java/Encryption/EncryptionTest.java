@@ -27,11 +27,11 @@ public class EncryptionTest {
         Tuple<String> user = new Tuple<>();
         user.setFirst("Hello");
         user.setSecond("World");
-        Tuple<String> encrypted = Encryption.encryptTuple(user, "A948AB9C57030E9FF7035EFFD4071DAA");
+        Tuple<String> encrypted = Encryption.encryptTuple(user, "TESTTEST");
         try {
             //Bad passwords don't give us jumbled data, they give us padding exceptions.
-            Tuple<String> decrypted = Encryption.decryptTuple(encrypted, "D26D340CD29882900DD330C00B8FA2DD"); //
-        }catch (BadPaddingException e){
+            Tuple<String> decrypted = Encryption.decryptTuple(encrypted, "TESTTEST"); //
+        }catch (WrongPasswordException e){
             Assert.assertTrue(true);
         }
     }

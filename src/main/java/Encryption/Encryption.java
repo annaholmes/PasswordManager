@@ -2,10 +2,16 @@ package Encryption;
 
 import Unsorted.Tuple;
 
+import javax.crypto.BadPaddingException;
 import javax.crypto.Cipher;
+import javax.crypto.IllegalBlockSizeException;
+import javax.crypto.NoSuchPaddingException;
 import javax.crypto.spec.SecretKeySpec;
+import java.security.InvalidKeyException;
 import java.security.Key;
+import java.security.NoSuchAlgorithmException;
 import java.util.Base64;
+import java.util.Optional;
 
 public class Encryption {
     //Modified code from https://gist.github.com/SimoneStefani/99052e8ce0550eb7725ca8681e4225c5
@@ -35,8 +41,8 @@ public class Encryption {
         String username = tuple.getFirst();
         String password = tuple.getSecond();
 
-        username = decrypt(username, masterPassword);
-        password = decrypt(password, masterPassword);
+        username = decrypt(username, masterPassword).get();
+        password = decrypt(password, masterPassword).get();
 
         Tuple output = new Tuple();
 
@@ -45,27 +51,49 @@ public class Encryption {
         return output;
 
     }
-    public static String encrypt(String data, String masterPassword) throws Exception {
+    public static String encrypt(String data, String masterPassword) throws NoSuchPaddingException, NoSuchAlgorithmException, InvalidKeyException, BadPaddingException, IllegalBlockSizeException {
         Key key = generateKey(masterPassword);
         Cipher c = Cipher.getInstance(ALGO);
         c.init(Cipher.ENCRYPT_MODE, key);
         byte[] encVal = c.doFinal(data.getBytes());
+
         System.gc();
         return Base64.getEncoder().encodeToString(encVal);
     }
-    public static String decrypt(String encryptedData,String masterPassword) throws Exception {
-        Key key = generateKey(masterPassword);
-        Cipher c = Cipher.getInstance(ALGO);
-        c.init(Cipher.DECRYPT_MODE, key);
-        byte[] decordedValue = Base64.getDecoder().decode(encryptedData);
-        byte[] decValue = c.doFinal(decordedValue);
-        System.gc();
-        return new String(decValue);
+    public static Optional<String> decrypt(String encryptedData, String masterPassword) throws WrongPasswordException {
+        try {
+            Key key = generateKey(masterPassword);
+            Cipher c = Cipher.getInstance(ALGO);
+            c.init(Cipher.DECRYPT_MODE, key);
+            byte[] decodedValue = Base64.getDecoder().decode(encryptedData);
+            byte[] decValue = c.doFinal(decodedValue);
+            String outputDecoded = new String(decValue);
+            System.gc();
+            return Optional.of(outputDecoded);
+            //We shouldn't get these, so it's fine to catch these here.
+        }catch (BadPaddingException e){
+            throw new WrongPasswordException();
+        } catch (NoSuchPaddingException e) {
+            e.printStackTrace();
+        } catch (NoSuchAlgorithmException e) {
+            e.printStackTrace();
+        } catch (IllegalBlockSizeException e) {
+            e.printStackTrace();
+        } catch (InvalidKeyException e) {
+            e.printStackTrace();
+        }
+        return Optional.empty();
     }
 
-    private static Key generateKey(String masterPassword) throws Exception {
+    private static Key generateKey(String masterPassword) {
+        int numberSpaces = 16-masterPassword.length();
+        for(int i=0;i<numberSpaces;i++){
+            masterPassword+=" ";
+        }
+        System.out.println(masterPassword.length());
         byte[] keyValue = masterPassword.getBytes();
         System.gc();
         return new SecretKeySpec(keyValue, ALGO);
     }
+
 }
