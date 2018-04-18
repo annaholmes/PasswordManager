@@ -12,13 +12,13 @@ import java.security.NoSuchAlgorithmException;
 
 public class EncryptionTest {
     @Test
-    public void TestEncryption() throws IllegalBlockSizeException, InvalidKeyException, BadPaddingException, NoSuchAlgorithmException, NoSuchPaddingException, ClassNotFoundException, NoSuchFieldException, IllegalAccessException, UnsupportedEncodingException, InvalidAlgorithmParameterException {
+    public void TestEncryption() throws Exception {
 
         Tuple<String> user = new Tuple<>();
         user.setFirst("Hello");
         user.setSecond("World");
-        Tuple<String> encrypted = Encryption.encrypt(user, "A948AB9C57030E9FF7035EFFD4071DAA");
-        Tuple<String> decrypted = Encryption.decrypt(encrypted, "A948AB9C57030E9FF7035EFFD4071DAA");
+        Tuple<String> encrypted = Encryption.encryptTuple(user, "A948AB9C57030E9FF7035EFFD4071DAA");
+        Tuple<String> decrypted = Encryption.decryptTuple(encrypted, "A948AB9C57030E9FF7035EFFD4071DAA");
         Assert.assertTrue(decrypted.getFirst().equals("Hello"));
 
 

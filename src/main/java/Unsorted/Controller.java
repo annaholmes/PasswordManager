@@ -1,4 +1,5 @@
 package Unsorted;
+import OtherStuff.PasswordGenerator;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.TableColumn;
@@ -6,7 +7,6 @@ import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
 
 import java.util.ArrayList;
-
 
 public class Controller {
 
