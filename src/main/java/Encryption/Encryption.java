@@ -2,57 +2,70 @@ package Encryption;
 
 import Unsorted.Tuple;
 
-import javax.crypto.BadPaddingException;
 import javax.crypto.Cipher;
-import javax.crypto.IllegalBlockSizeException;
-import javax.crypto.NoSuchPaddingException;
-import javax.crypto.spec.IvParameterSpec;
 import javax.crypto.spec.SecretKeySpec;
-import java.io.UnsupportedEncodingException;
-import java.lang.reflect.Field;
-import java.security.InvalidAlgorithmParameterException;
-import java.security.InvalidKeyException;
-import java.security.NoSuchAlgorithmException;
+import java.security.Key;
+import java.util.Base64;
 
 public class Encryption {
-    private static final String ALGORITHM = "AES/CBC/PKCS5Padding";
-    private static byte[] iv = { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 };
-    private static IvParameterSpec ivspec = new IvParameterSpec(iv);
-    public static Tuple<String> encrypt(Tuple<String> tuple, String masterPassword) throws NoSuchPaddingException, NoSuchAlgorithmException, InvalidKeyException, BadPaddingException, IllegalBlockSizeException, UnsupportedEncodingException, ClassNotFoundException, IllegalAccessException, NoSuchFieldException, InvalidAlgorithmParameterException {
+    //Modified code from https://gist.github.com/SimoneStefani/99052e8ce0550eb7725ca8681e4225c5
+    private static final String ALGO = "AES";
+    public static Tuple<String> encryptTuple(Tuple<String> tuple, String masterPassword) throws Exception {
 
 
 
         //Thing
-        String combined = tuple.getSecond();
-        SecretKeySpec secretKey = new SecretKeySpec(masterPassword.getBytes(), "AES");
-        System.out.println(secretKey.getAlgorithm());
-        System.out.println(secretKey);
-        Cipher cipher = Cipher.getInstance(ALGORITHM);
+        String username = tuple.getFirst();
+        String password = tuple.getSecond();
 
-        cipher.init(Cipher.ENCRYPT_MODE, secretKey,ivspec); //Illegal key size
-        Tuple<String> output = new Tuple<>();
-        String username = cipher.doFinal(tuple.getFirst().getBytes("UTF-8")).toString();
-        String password = cipher.doFinal(tuple.getSecond().getBytes("UTF-8")).toString();
+        username = encrypt(username, masterPassword);
+        password = encrypt(password,masterPassword);
+
+        Tuple output = new Tuple();
+
         output.setFirst(username);
         output.setSecond(password);
+        //Hopefully this will GC our passwords so someone can't just read our memory as easily.
         return output;
 
     }
-    public static Tuple<String> decrypt(Tuple<String> tuple, String masterPassword) throws InvalidKeyException, NoSuchPaddingException, NoSuchAlgorithmException, BadPaddingException, IllegalBlockSizeException, UnsupportedEncodingException, IllegalAccessException, ClassNotFoundException, NoSuchFieldException, InvalidAlgorithmParameterException {
+    public static Tuple<String> decryptTuple(Tuple<String> tuple, String masterPassword) throws Exception {
 
 
         String username = tuple.getFirst();
         String password = tuple.getSecond();
 
-        SecretKeySpec secretKey = new SecretKeySpec(masterPassword.getBytes(), "AES");
-        Cipher cipher = Cipher.getInstance("AES/CBC/PKCS5Padding");
-        cipher.init(Cipher.DECRYPT_MODE, secretKey,ivspec);
-        username = cipher.doFinal(username.getBytes("UTF-8")).toString();
-        password = cipher.doFinal(password.getBytes("UTF-8")).toString();
+        username = decrypt(username, masterPassword);
+        password = decrypt(password, masterPassword);
+
         Tuple output = new Tuple();
+
         output.setFirst(username);
         output.setSecond(password);
         return output;
 
+    }
+    public static String encrypt(String data, String masterPassword) throws Exception {
+        Key key = generateKey(masterPassword);
+        Cipher c = Cipher.getInstance(ALGO);
+        c.init(Cipher.ENCRYPT_MODE, key);
+        byte[] encVal = c.doFinal(data.getBytes());
+        System.gc();
+        return Base64.getEncoder().encodeToString(encVal);
+    }
+    public static String decrypt(String encryptedData,String masterPassword) throws Exception {
+        Key key = generateKey(masterPassword);
+        Cipher c = Cipher.getInstance(ALGO);
+        c.init(Cipher.DECRYPT_MODE, key);
+        byte[] decordedValue = Base64.getDecoder().decode(encryptedData);
+        byte[] decValue = c.doFinal(decordedValue);
+        System.gc();
+        return new String(decValue);
+    }
+
+    private static Key generateKey(String masterPassword) throws Exception {
+        byte[] keyValue = masterPassword.getBytes();
+        System.gc();
+        return new SecretKeySpec(keyValue, ALGO);
     }
 }

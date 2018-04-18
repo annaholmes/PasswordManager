@@ -1,4 +1,4 @@
-package Unsorted;
+package OtherStuff;
 
 public class PasswordGenerator {
 
