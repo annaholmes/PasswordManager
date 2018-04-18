@@ -2,6 +2,7 @@ package Encryption;
 
 import Unsorted.Tuple;
 
+import javax.crypto.BadPaddingException;
 import javax.crypto.Cipher;
 import javax.crypto.spec.SecretKeySpec;
 import java.security.Key;
@@ -54,13 +55,17 @@ public class Encryption {
         return Base64.getEncoder().encodeToString(encVal);
     }
     public static String decrypt(String encryptedData,String masterPassword) throws Exception {
-        Key key = generateKey(masterPassword);
-        Cipher c = Cipher.getInstance(ALGO);
-        c.init(Cipher.DECRYPT_MODE, key);
-        byte[] decordedValue = Base64.getDecoder().decode(encryptedData);
-        byte[] decValue = c.doFinal(decordedValue);
-        System.gc();
-        return new String(decValue);
+        try {
+            Key key = generateKey(masterPassword);
+            Cipher c = Cipher.getInstance(ALGO);
+            c.init(Cipher.DECRYPT_MODE, key);
+            byte[] decordedValue = Base64.getDecoder().decode(encryptedData);
+            byte[] decValue = c.doFinal(decordedValue);
+            System.gc();
+            return new String(decValue);
+        }catch (BadPaddingException e){
+            throw new WrongPasswordException();
+        }
     }
 
     private static Key generateKey(String masterPassword) throws Exception {

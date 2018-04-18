@@ -31,7 +31,7 @@ public class EncryptionTest {
         try {
             //Bad passwords don't give us jumbled data, they give us padding exceptions.
             Tuple<String> decrypted = Encryption.decryptTuple(encrypted, "D26D340CD29882900DD330C00B8FA2DD"); //
-        }catch (BadPaddingException e){
+        }catch (WrongPasswordException e){
             Assert.assertTrue(true);
         }
     }
