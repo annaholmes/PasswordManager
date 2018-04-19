@@ -41,8 +41,17 @@ public class Database {
         //
     }
 
+<<<<<<< HEAD
     public void deletePassword(Tuple<String> labelAndPassword) throws Exception {
     	labelAndPassword = Encryption.encryptTuple(labelAndPassword, masterPassword);
+=======
+<<<<<<< HEAD
+    public void deletePassword(Tuple<String> labelAndPassword) throws Exception {
+    	labelAndPassword = Encryption.encryptTuple(labelAndPassword, masterPassword);
+=======
+    public void deletePassword(Tuple<String> labelAndPassword) throws SQLException {
+>>>>>>> master
+>>>>>>> master
     	stat.execute("SELECT * FROM Passwords WHERE Label = '" + labelAndPassword.getFirst() + "'");
     	ResultSet results = stat.getResultSet();
     	if (results.next()) {
