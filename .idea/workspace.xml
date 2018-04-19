@@ -5,19 +5,7 @@
       <change beforePath="$PROJECT_DIR$/.gradle/4.6/fileHashes/fileHashes.bin" afterPath="$PROJECT_DIR$/.gradle/4.6/fileHashes/fileHashes.bin" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.6/fileHashes/fileHashes.lock" afterPath="$PROJECT_DIR$/.gradle/4.6/fileHashes/fileHashes.lock" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/Encryption/Encryption.class" afterPath="$PROJECT_DIR$/out/production/classes/Encryption/Encryption.class" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/Encryption/EncryptionTest.class" afterPath="$PROJECT_DIR$/out/production/classes/Encryption/EncryptionTest.class" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/Unsorted/Controller.class" afterPath="$PROJECT_DIR$/out/production/classes/Unsorted/Controller.class" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/Unsorted/Database.class" afterPath="$PROJECT_DIR$/out/production/classes/Unsorted/Database.class" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/Unsorted/Tuple.class" afterPath="$PROJECT_DIR$/out/production/classes/Unsorted/Tuple.class" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Encryption/Encryption.java" afterPath="$PROJECT_DIR$/src/main/java/Encryption/Encryption.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Encryption/EncryptionTest.java" afterPath="$PROJECT_DIR$/src/main/java/Encryption/EncryptionTest.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Encryption/WrongPasswordException.java" afterPath="$PROJECT_DIR$/src/main/java/Encryption/WrongPasswordException.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/OtherStuff/PasswordGenerator.java" afterPath="$PROJECT_DIR$/src/main/java/OtherStuff/PasswordGenerator.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Unsorted/Controller.java" afterPath="$PROJECT_DIR$/src/main/java/Unsorted/Controller.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Unsorted/Database.java" afterPath="$PROJECT_DIR$/src/main/java/Unsorted/Database.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Unsorted/Main.java" afterPath="$PROJECT_DIR$/src/main/java/Unsorted/Main.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Unsorted/Tuple.java" afterPath="$PROJECT_DIR$/src/main/java/Unsorted/Tuple.java" />
+      <change beforePath="$PROJECT_DIR$/build.gradle" afterPath="$PROJECT_DIR$/build.gradle" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/.gradle/" />
@@ -53,7 +41,7 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Main.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Main.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/Unsorted/Main.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="60">
@@ -67,7 +55,7 @@
         <entry file="file://$PROJECT_DIR$/src/main/java/Encryption/Encryption.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="507">
-              <caret line="36" column="0" lean-forward="true" selection-start-line="36" selection-start-column="0" selection-end-line="36" selection-end-column="0" />
+              <caret line="36" column="0" lean-forward="false" selection-start-line="36" selection-start-column="0" selection-end-line="36" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -100,8 +88,8 @@
       <file leaf-file-name="build.gradle" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/build.gradle">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="45">
-              <caret line="3" column="0" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+            <state relative-caret-position="210">
+              <caret line="14" column="30" lean-forward="false" selection-start-line="14" selection-start-column="30" selection-end-line="14" selection-end-column="30" />
               <folding />
             </state>
           </provider>
@@ -133,8 +121,8 @@
       <file leaf-file-name="Controller.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/Unsorted/Controller.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="189">
-              <caret line="76" column="16" lean-forward="true" selection-start-line="76" selection-start-column="0" selection-end-line="77" selection-end-column="0" />
+            <state relative-caret-position="977">
+              <caret line="76" column="16" lean-forward="false" selection-start-line="76" selection-start-column="0" selection-end-line="77" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -142,11 +130,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Database.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Database.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/Unsorted/Database.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="495">
-              <caret line="35" column="35" lean-forward="false" selection-start-line="35" selection-start-column="35" selection-end-line="35" selection-end-column="35" />
+            <state relative-caret-position="-186">
+              <caret line="20" column="37" lean-forward="false" selection-start-line="20" selection-start-column="37" selection-end-line="20" selection-end-column="37" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <marker date="1524179213991" expanded="true" signature="609:673" ph="CREATE TABLE... Passwords" />
@@ -253,6 +241,11 @@
                 <option name="name" value="buildEnvironment" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
+                <option name="description" value="Runs this project as a JVM application" />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="run" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
                 <option name="description" value="Generates Gradle wrapper files." />
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
                 <option name="name" value="wrapper" />
@@ -268,6 +261,11 @@
                 <option name="name" value="javadoc" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
+                <option name="description" value="Creates OS specific scripts to run the project as a JVM application." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="startScripts" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
                 <option name="description" value="Assembles a jar archive containing the main classes." />
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
                 <option name="name" value="jar" />
@@ -278,6 +276,11 @@
                 <option name="name" value="model" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
+                <option name="description" value="Installs the project as a distribution as-is." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="installDist" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
                 <option name="description" value="Processes main resources." />
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
                 <option name="name" value="processResources" />
@@ -286,6 +289,11 @@
                 <option name="description" value="Displays the tasks runnable from root project 'PasswordManager'." />
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
                 <option name="name" value="tasks" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Assembles the main distributions" />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="assembleDist" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
                 <option name="description" value="Initializes a new Gradle build." />
@@ -353,6 +361,16 @@
                 <option name="name" value="buildNeeded" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
+                <option name="description" value="Bundles the project as a distribution." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="distTar" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Bundles the project as a distribution." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="distZip" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
                 <option name="description" value="Displays the properties of root project 'PasswordManager'." />
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
                 <option name="name" value="properties" />
@@ -365,8 +383,8 @@
     <option name="modificationStamps">
       <map>
         <entry key="$USER_HOME$/.gradle/gradle.properties" value="2963252882" />
-        <entry key="$PROJECT_DIR$" value="6091530389000" />
-        <entry key="$PROJECT_DIR$/build.gradle" value="1609666643" />
+        <entry key="$PROJECT_DIR$" value="6091531830000" />
+        <entry key="$PROJECT_DIR$/build.gradle" value="471652951" />
         <entry key="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" value="2735609008" />
         <entry key="$PROJECT_DIR$/settings.gradle" value="2182603810" />
       </map>
@@ -494,15 +512,15 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/src/main/java/Keychain/KeychainUtils.java" />
-        <option value="$PROJECT_DIR$/build.gradle" />
         <option value="$PROJECT_DIR$/src/main/java/Unsorted/Main.java" />
         <option value="$PROJECT_DIR$/src/main/java/Unsorted/Tuple.java" />
         <option value="$PROJECT_DIR$/src/main/java/Encryption/WrongPasswordException.java" />
         <option value="$PROJECT_DIR$/src/main/java/OtherStuff/PasswordGenerator.java" />
         <option value="$PROJECT_DIR$/src/main/java/Encryption/Encryption.java" />
         <option value="$PROJECT_DIR$/src/main/java/Encryption/EncryptionTest.java" />
-        <option value="$PROJECT_DIR$/src/main/java/Unsorted/Database.java" />
         <option value="$PROJECT_DIR$/src/main/java/Unsorted/Controller.java" />
+        <option value="$PROJECT_DIR$/build.gradle" />
+        <option value="$PROJECT_DIR$/src/main/java/Unsorted/Database.java" />
       </list>
     </option>
   </component>
@@ -602,6 +620,10 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="PasswordManager" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
             </path>
           </expand>
           <select />
@@ -821,7 +843,7 @@
     </recent_temporary>
   </component>
   <component name="SbtLocalSettings">
-    <option name="lastUpdateTimestamp" value="1524178707620" />
+    <option name="lastUpdateTimestamp" value="1524179836067" />
     <option name="externalProjectsViewState">
       <projects_view />
     </option>
@@ -843,7 +865,7 @@
       <workItem from="1524084820209" duration="962000" />
       <workItem from="1524155345442" duration="1331000" />
       <workItem from="1524166219330" duration="3411000" />
-      <workItem from="1524178457490" duration="825000" />
+      <workItem from="1524178457490" duration="1515000" />
     </task>
     <servers />
   </component>
@@ -880,10 +902,11 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="7549000" />
+    <option name="totallyTimeSpent" value="8239000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="22" width="1440" height="825" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -905,7 +928,7 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Floobits" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32971507" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="JProfiler" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Learn" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3298611" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -1329,18 +1352,10 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/Keychain/KeychainUtils.java" />
-    <entry file="file://$PROJECT_DIR$/build.gradle">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" column="0" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/Encryption/Encryption.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="507">
-          <caret line="36" column="0" lean-forward="true" selection-start-line="36" selection-start-column="0" selection-end-line="36" selection-end-column="0" />
+          <caret line="36" column="0" lean-forward="false" selection-start-line="36" selection-start-column="0" selection-end-line="36" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1354,14 +1369,6 @@
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Encryption/WrongPasswordException.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="13" lean-forward="false" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1381,25 +1388,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Unsorted/Database.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/Encryption/WrongPasswordException.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="495">
-          <caret line="35" column="35" lean-forward="false" selection-start-line="35" selection-start-column="35" selection-end-line="35" selection-end-column="35" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <marker date="1524179213991" expanded="true" signature="609:673" ph="CREATE TABLE... Passwords" />
-            <marker date="1524179213991" expanded="true" signature="867:960" ph="INSERT INTO Passwords... " />
-            <marker date="1524179213991" expanded="true" signature="1154:1177" ph="SELECT * FRO... Passwords" />
-            <marker date="1524179213991" expanded="true" signature="1816:1891" ph="SELECT * FRO... Passwords" />
-            <marker date="1524179213991" expanded="true" signature="1988:2061" ph="DELETE FROM Passwords... " />
-          </folding>
+        <state relative-caret-position="30">
+          <caret line="2" column="13" lean-forward="false" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/Unsorted/Controller.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="189">
-          <caret line="76" column="16" lean-forward="true" selection-start-line="76" selection-start-column="0" selection-end-line="77" selection-end-column="0" />
+        <state relative-caret-position="977">
+          <caret line="76" column="16" lean-forward="false" selection-start-line="76" selection-start-column="0" selection-end-line="77" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1411,6 +1411,29 @@
         <state relative-caret-position="60">
           <caret line="8" column="13" lean-forward="false" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/build.gradle">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="14" column="30" lean-forward="false" selection-start-line="14" selection-start-column="30" selection-end-line="14" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Unsorted/Database.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-186">
+          <caret line="20" column="37" lean-forward="false" selection-start-line="20" selection-start-column="37" selection-end-line="20" selection-end-column="37" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <marker date="1524179213991" expanded="true" signature="609:673" ph="CREATE TABLE... Passwords" />
+            <marker date="1524179213991" expanded="true" signature="867:960" ph="INSERT INTO Passwords... " />
+            <marker date="1524179213991" expanded="true" signature="1154:1177" ph="SELECT * FRO... Passwords" />
+            <marker date="1524179213991" expanded="true" signature="1816:1891" ph="SELECT * FRO... Passwords" />
+            <marker date="1524179213991" expanded="true" signature="1988:2061" ph="DELETE FROM Passwords... " />
+          </folding>
         </state>
       </provider>
     </entry>
