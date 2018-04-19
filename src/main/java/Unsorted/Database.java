@@ -1,10 +1,9 @@
-package Unsorted;
+package main.java.Unsorted;
 
 import java.sql.*;
 import java.util.ArrayList;
-
-import static Encryption.Encryption.decryptTuple;
-import static Encryption.Encryption.encryptTuple;
+import static main.java.Encryption.Encryption.decryptTuple;
+import static main.java.Encryption.Encryption.encryptTuple;
 
 public class Database {
 	private Connection con;
@@ -38,9 +37,14 @@ public class Database {
         return passwords;
     }
 
-    public void editData(Tuple<String> oldLabelAndPassword, Tuple<String> newLabelAndPassword) {
-        // TODO remove old label & add new label
-        //
+    public void editData(Tuple<String> oldLabelAndPassword, Tuple<String> newLabelAndPassword) throws Exception {
+        oldLabelAndPassword = encryptTuple(oldLabelAndPassword, masterPassword);
+        newLabelAndPassword = encryptTuple(newLabelAndPassword, masterPassword);
+        stat.execute("SELECT * FROM Passwords WHERE Label = '" + oldLabelAndPassword.getFirst() + "'");
+        ResultSet results = stat.getResultSet();
+        if (results.next()) {
+        	
+        }
     }
 
     public void deletePassword(Tuple<String> labelAndPassword) throws Exception {

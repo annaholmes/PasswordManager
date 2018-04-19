@@ -1,6 +1,6 @@
-package Encryption;
+package main.java.Encryption;
 
-import Unsorted.Tuple;
+import main.java.Unsorted.Tuple;
 import org.junit.Assert;
 import org.junit.Test;
 
@@ -10,7 +10,7 @@ import java.security.InvalidAlgorithmParameterException;
 import java.security.InvalidKeyException;
 import java.security.NoSuchAlgorithmException;
 
-import static Encryption.Encryption.decryptTuple;
+import static main.java.Encryption.Encryption.decryptTuple;
 
 public class EncryptionTest {
     @Test

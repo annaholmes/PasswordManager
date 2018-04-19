@@ -1,7 +1,7 @@
-package Encryption;
+package main.java.Encryption;
 
 
-import Unsorted.Tuple;
+import main.java.Unsorted.Tuple;
 
 import javax.crypto.BadPaddingException;
 import javax.crypto.Cipher;
