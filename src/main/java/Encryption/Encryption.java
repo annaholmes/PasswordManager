@@ -27,10 +27,7 @@ public class Encryption {
         username = encrypt(username, masterPassword);
         password = encrypt(password,masterPassword);
 
-        Tuple output = new Tuple();
-
-        output.setFirst(username);
-        output.setSecond(password);
+        Tuple output = new Tuple(username, password);
         //Hopefully this will GC our passwords so someone can't just read our memory as easily.
         return output;
 
@@ -44,10 +41,8 @@ public class Encryption {
         username = decrypt(username, masterPassword).get();
         password = decrypt(password, masterPassword).get();
 
-        Tuple output = new Tuple();
-
-        output.setFirst(username);
-        output.setSecond(password);
+        Tuple output = new Tuple(username, password);
+        
         return output;
 
     }
