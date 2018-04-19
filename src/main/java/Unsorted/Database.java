@@ -1,6 +1,6 @@
-package Unsorted;
+package main.java.Unsorted;
 
-import Unsorted.Tuple;
+import main.java.Unsorted.Tuple;
 
 import java.util.ArrayList;
 

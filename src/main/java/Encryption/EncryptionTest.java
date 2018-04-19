@@ -1,6 +1,6 @@
-package Encryption;
+package main.java.Encryption;
 
-import Unsorted.Tuple;
+import main.java.Unsorted.Tuple;
 import org.junit.Assert;
 import org.junit.Test;
 

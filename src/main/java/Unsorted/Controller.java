@@ -1,5 +1,5 @@
-package Unsorted;
-import OtherStuff.PasswordGenerator;
+package main.java.Unsorted;
+import main.java.OtherStuff.PasswordGenerator;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.TableColumn;
