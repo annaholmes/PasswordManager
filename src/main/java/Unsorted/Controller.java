@@ -44,7 +44,6 @@ public class Controller {
 
     @FXML
     private void initialize() {
-        System.out.println("hello");
         generator = new PasswordGenerator();
 
 //        popup.setOnAction(new EventHandler<ActionEvent>() {
