@@ -1,6 +1,7 @@
-package main.java.Encryption;
+package Encryption;
 
-import main.java.Unsorted.Tuple;
+
+import Unsorted.Tuple;
 
 import javax.crypto.BadPaddingException;
 import javax.crypto.Cipher;
@@ -55,7 +56,7 @@ public class Encryption {
         System.gc();
         return Base64.getEncoder().encodeToString(encVal);
     }
-    public static Optional<String> decrypt(String encryptedData, String masterPassword) throws WrongPasswordException {
+    public static Optional<String> decrypt(String encryptedData, String masterPassword) throws WrongPasswordException, WrongPasswordException {
         try {
             Key key = generateKey(masterPassword);
             Cipher c = Cipher.getInstance(ALGO);

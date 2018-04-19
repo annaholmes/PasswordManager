@@ -1,4 +1,4 @@
-package main.java.OtherStuff;
+package OtherStuff;
 
 public class PasswordGenerator {
 

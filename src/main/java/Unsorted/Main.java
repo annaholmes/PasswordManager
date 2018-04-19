@@ -1,4 +1,4 @@
-package main.java.Unsorted;
+package Unsorted;
 
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;

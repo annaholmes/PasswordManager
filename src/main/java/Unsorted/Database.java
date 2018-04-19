@@ -1,9 +1,10 @@
-package main.java.Unsorted;
+package Unsorted;
 
-import main.java.Encryption.Encryption;
-import main.java.Unsorted.Tuple;
 import java.sql.*;
 import java.util.ArrayList;
+
+import static Encryption.Encryption.decryptTuple;
+import static Encryption.Encryption.encryptTuple;
 
 public class Database {
 	private Connection con;
@@ -22,7 +23,7 @@ public class Database {
     }
 
     public void addPassword(Tuple<String> labelAndPassword) throws Exception {
-        Tuple<String> encrypted = Encryption.encryptTuple(labelAndPassword, masterPassword);
+        Tuple<String> encrypted = encryptTuple(labelAndPassword, masterPassword);
         stat.execute("INSERT INTO Passwords VALUES ('" + encrypted.getFirst() + ", '" + encrypted.getSecond() + "')");
     }
 
@@ -31,7 +32,8 @@ public class Database {
         stat.execute("SELECT * FROM Passwords");
         ResultSet results = stat.getResultSet();
         while (results.next()) {
-        	passwords.add(Encryption.decryptTuple(new Tuple<String>(results.getString("Label"), results.getString("Password")), masterPassword));
+            Tuple<String> encrypted = new Tuple(results.getString("Label"), results.getString("Password"));
+        	passwords.add(decryptTuple(encrypted, masterPassword));
         }
         return passwords;
     }
@@ -42,7 +44,7 @@ public class Database {
     }
 
     public void deletePassword(Tuple<String> labelAndPassword) throws Exception {
-    	labelAndPassword = Encryption.encryptTuple(labelAndPassword, masterPassword);
+    	labelAndPassword = encryptTuple(labelAndPassword, masterPassword);
     	stat.execute("SELECT * FROM Passwords WHERE Label = '" + labelAndPassword.getFirst() + "'");
     	ResultSet results = stat.getResultSet();
     	if (results.next()) {

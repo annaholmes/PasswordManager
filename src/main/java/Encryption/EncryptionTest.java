@@ -1,6 +1,6 @@
-package main.java.Encryption;
+package Encryption;
 
-import main.java.Unsorted.Tuple;
+import Unsorted.Tuple;
 import org.junit.Assert;
 import org.junit.Test;
 
@@ -10,13 +10,15 @@ import java.security.InvalidAlgorithmParameterException;
 import java.security.InvalidKeyException;
 import java.security.NoSuchAlgorithmException;
 
+import static Encryption.Encryption.decryptTuple;
+
 public class EncryptionTest {
     @Test
     public void TestEncryption() throws Exception {
 
     	Tuple<String> user = new Tuple<>("Hello", "World");
         Tuple<String> encrypted = Encryption.encryptTuple(user, "A948AB9C57030E9FF7035EFFD4071DAA");
-        Tuple<String> decrypted = Encryption.decryptTuple(encrypted, "A948AB9C57030E9FF7035EFFD4071DAA");
+        Tuple<String> decrypted = decryptTuple(encrypted, "A948AB9C57030E9FF7035EFFD4071DAA");
         Assert.assertTrue(decrypted.getFirst().equals("Hello"));
 
     }
@@ -26,7 +28,7 @@ public class EncryptionTest {
         Tuple<String> encrypted = Encryption.encryptTuple(user, "TESTTEST");
         try {
             //Bad passwords don't give us jumbled data, they give us padding exceptions.
-            Tuple<String> decrypted = Encryption.decryptTuple(encrypted, "TESTTEST"); //
+            Tuple<String> decrypted = decryptTuple(encrypted, "TESTTEST"); //
         }catch (WrongPasswordException e){
             Assert.assertTrue(true);
         }

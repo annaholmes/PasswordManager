@@ -1,5 +1,5 @@
-package main.java.Unsorted;
-import main.java.OtherStuff.PasswordGenerator;
+package Unsorted;
+import OtherStuff.PasswordGenerator;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.TableColumn;
@@ -34,7 +34,7 @@ public class Controller {
     @FXML
     TextField passwordField;
 
-    Database database;
+  Database database;
 
     PasswordGenerator generator;
 
@@ -74,7 +74,7 @@ public class Controller {
     @FXML
     private void addPassword() {
         // TODO  make sure there is something in labelField & passwordField & that labelField is unique in this.data
-        database.addPassword(new Tuple<String>());
+//        database.addPassword(new Tuple<String>());
     }
 
     @FXML

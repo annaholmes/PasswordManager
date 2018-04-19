@@ -1,4 +1,4 @@
-package main.java.Unsorted;
+package Unsorted;
 
 public class Tuple<E> {
 
