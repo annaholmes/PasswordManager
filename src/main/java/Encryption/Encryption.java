@@ -1,6 +1,5 @@
 package main.java.Encryption;
 
-
 import main.java.Unsorted.Tuple;
 
 import javax.crypto.BadPaddingException;

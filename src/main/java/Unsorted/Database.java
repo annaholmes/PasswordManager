@@ -43,7 +43,7 @@ public class Database {
         stat.execute("SELECT * FROM Passwords WHERE Label = '" + oldLabelAndPassword.getFirst() + "'");
         ResultSet results = stat.getResultSet();
         if (results.next()) {
-        	
+        	stat.execute("UPDATE Passwords SET Label = '" + newLabelAndPassword.getFirst() + "', Password = '" + newLabelAndPassword.getSecond() + "' WHERE Label = '" + oldLabelAndPassword.getFirst() + "'");
         }
     }
 
