@@ -2,26 +2,26 @@ package Unsorted;
 
 public class Tuple<E> {
 
-    private E first,second;
+    private E label,password;
 
-    public Tuple(E first, E second) {
-        this.first = first;
-        this.second = second;
+    public Tuple(E label, E password) {
+        this.label = label;
+        this.password = password;
     }
 
-    public E getFirst() {
-        return this.first;
+    public E getLabel() {
+        return this.label;
     }
 
-    public E getSecond() {
-        return this.second;
+    public E getPassword() {
+        return this.password;
     }
 
-    public void setFirst(E first) {
-        this.first = first;
+    public void setLabel(E first) {
+        this.label = first;
     }
 
-    public void setSecond(E second) {
-        this.second = second;
+    public void setPassword(E second) {
+        this.password = second;
     }
 }

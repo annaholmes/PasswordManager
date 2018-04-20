@@ -11,7 +11,7 @@ public class EncryptionTest {
     	Tuple<String> user = new Tuple("Hello", "World");
         Tuple<String> encrypted = Encryption.encryptTuple(user, "A948AB9C57030E9FF7035EFFD4071DAA");
         Tuple<String> decrypted = Encryption.decryptTuple(encrypted, "A948AB9C57030E9FF7035EFFD4071DAA");
-        Assert.assertTrue(decrypted.getFirst().equals("Hello"));
+        Assert.assertTrue(decrypted.getLabel().equals("Hello"));
 
     }
     @Test

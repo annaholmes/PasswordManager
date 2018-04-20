@@ -23,12 +23,12 @@ public class Database {
     public void addPassword(Tuple<String> labelAndPassword) throws Exception {
     	Tuple<String> encrypted = Encryption.encryptTuple(labelAndPassword, masterPassword);
     	PreparedStatement search = con.prepareStatement("SELECT * FROM Passwords WHERE Label = ?");
-    	search.setString(1, encrypted.getFirst());
+    	search.setString(1, encrypted.getLabel());
     	ResultSet results = search.executeQuery();
     	if (!results.next()) {
     		PreparedStatement add = con.prepareStatement("INSERT INTO Passwords VALUES (?, ?)");
-    		add.setString(1, encrypted.getFirst());
-    		add.setString(2, encrypted.getSecond());
+    		add.setString(1, encrypted.getLabel());
+    		add.setString(2, encrypted.getPassword());
     		add.execute();
     	}
     	results.close();
@@ -49,13 +49,13 @@ public class Database {
         oldLabelAndPassword = Encryption.encryptTuple(oldLabelAndPassword, masterPassword);
         newLabelAndPassword = Encryption.encryptTuple(newLabelAndPassword, masterPassword);
         PreparedStatement edit = con.prepareStatement("SELECT * FROM Passwords WHERE Label = ?");
-        edit.setString(1, oldLabelAndPassword.getFirst());
+        edit.setString(1, oldLabelAndPassword.getLabel());
         ResultSet results = edit.executeQuery();
         if (results.next()) {
         	PreparedStatement update = con.prepareStatement("UPDATE Passwords SET Label = ?, Password = ? WHERE Label = ?");
-        	update.setString(1, newLabelAndPassword.getFirst());
-        	update.setString(2, newLabelAndPassword.getSecond());
-        	update.setString(3, oldLabelAndPassword.getFirst());
+        	update.setString(1, newLabelAndPassword.getLabel());
+        	update.setString(2, newLabelAndPassword.getPassword());
+        	update.setString(3, oldLabelAndPassword.getLabel());
         	update.execute();
         }
     }
@@ -63,11 +63,11 @@ public class Database {
     public void deletePassword(Tuple<String> labelAndPassword) throws Exception {
     	labelAndPassword = Encryption.encryptTuple(labelAndPassword, masterPassword);
     	PreparedStatement search = con.prepareStatement("SELECT * FROM Passwords WHERE Label = ?");
-    	search.setString(1, labelAndPassword.getFirst());
+    	search.setString(1, labelAndPassword.getLabel());
     	ResultSet results = search.executeQuery();
     	if (results.next()) {
     		PreparedStatement delete = con.prepareStatement("DELETE FROM Passwords WHERE Label = ?");
-    		delete.setString(1, labelAndPassword.getFirst());
+    		delete.setString(1, labelAndPassword.getLabel());
     		delete.execute();
     	}
     	results.close();

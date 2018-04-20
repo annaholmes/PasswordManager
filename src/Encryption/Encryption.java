@@ -19,8 +19,8 @@ public class Encryption {
     public static Tuple<String> encryptTuple(Tuple<String> tuple, String masterPassword) throws Exception {
 
         //Thing
-        String username = tuple.getFirst();
-        String password = tuple.getSecond();
+        String username = tuple.getLabel();
+        String password = tuple.getPassword();
 
         username = encrypt(username, masterPassword);
         password = encrypt(password,masterPassword);
@@ -33,8 +33,8 @@ public class Encryption {
     public static Tuple<String> decryptTuple(Tuple<String> tuple, String masterPassword) throws Exception {
 
 
-        String username = tuple.getFirst();
-        String password = tuple.getSecond();
+        String username = tuple.getLabel();
+        String password = tuple.getPassword();
 
         username = decrypt(username, masterPassword).get();
         password = decrypt(password, masterPassword).get();
