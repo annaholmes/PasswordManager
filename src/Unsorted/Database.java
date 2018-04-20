@@ -4,6 +4,7 @@ import java.sql.*;
 import java.util.ArrayList;
 
 public class Database {
+<<<<<<< Updated upstream
     private Connection con;
     private Statement stat;
     private String masterPassword;
@@ -12,6 +13,16 @@ public class Database {
         this.masterPassword = masterPassword;
     }
 
+=======
+	private Connection con;
+	private Statement stat;
+	private String masterPassword;
+	
+	public Database() {
+		this.masterPassword = "abc";
+	}
+	
+>>>>>>> Stashed changes
     public void createDatabase() throws SQLException, ClassNotFoundException {
         Class.forName("org.sqlite.JDBC");
         con = DriverManager.getConnection("jdbc:sqlite:Passwords");
@@ -34,13 +45,25 @@ public class Database {
         results.close();
     }
 
-    public ArrayList<Tuple<String>> getPasswords() throws SQLException, Exception {
+    public ArrayList<Tuple<String>> getAllPasswords() throws SQLException, Exception {
         ArrayList<Tuple<String>> passwords = new ArrayList<Tuple<String>>();
         stat.execute("SELECT * FROM Passwords");
         ResultSet results = stat.getResultSet();
         while (results.next()) {
             Tuple<String> encrypted = new Tuple(results.getString("Label"), results.getString("Password"));
             passwords.add(Encryption.decryptTuple(encrypted, masterPassword));
+        }
+        return passwords;
+    }
+    
+    public ArrayList<Tuple<String>> searchPasswords(String label) throws Exception {
+    	ArrayList<Tuple<String>> passwords = new ArrayList<Tuple<String>>();
+    	PreparedStatement search = con.prepareStatement("SELECT * FROM Passwords WHERE Label = ?");
+    	search.setString(1, label);
+        ResultSet results = search.executeQuery();
+        while (results.next()) {
+            Tuple<String> encrypted = new Tuple(results.getString("Label"), results.getString("Password"));
+        	passwords.add(Encryption.decryptTuple(encrypted, masterPassword));
         }
         return passwords;
     }
