@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="Libs">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/Libs/junit-4.12.jar!/" />
+      <root url="jar://$PROJECT_DIR$/Libs/commons-crypto-1.0.0.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
