@@ -25,10 +25,4 @@ public class LoginValidation {
         setUpPassword(newPassword);
     }
 
-    public static void main(String[] args) {
-        LoginValidation lv = new LoginValidation();
-        lv.setUpPassword("abc");
-        System.out.println(lv.validate("abdc", "$2a$10$PP7vsL//D2fDvbrH5cgc0.Ud6uXxvZBTuX7YpYpM6MqsQ3XQwwVXi"));
-    }
-
 }

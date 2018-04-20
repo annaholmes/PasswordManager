@@ -11,6 +11,7 @@ import java.security.InvalidKeyException;
 import java.security.Key;
 import java.security.NoSuchAlgorithmException;
 import java.util.Base64;
+import java.util.NoSuchElementException;
 import java.util.Optional;
 
 public class Encryption {
@@ -30,19 +31,21 @@ public class Encryption {
         return output;
 
     }
-    public static Tuple<String> decryptTuple(Tuple<String> tuple, String masterPassword) throws Exception {
+    public static Tuple<String> decryptTuple(Tuple<String> tuple, String masterPassword) throws WrongPasswordException {
 
 
-        String username = tuple.getLabel();
-        String password = tuple.getPassword();
+            String username = tuple.getLabel();
+            String password = tuple.getPassword();
+            Tuple output;
+            try {
+                username = decrypt(username, masterPassword).get();
+                password = decrypt(password, masterPassword).get();
 
-        username = decrypt(username, masterPassword).get();
-        password = decrypt(password, masterPassword).get();
-
-        Tuple output = new Tuple(username, password);
-
-        return output;
-
+                 output = new Tuple(username, password);
+            }catch (NoSuchElementException e){
+                throw new WrongPasswordException();
+            }
+            return output;
     }
     public static String encrypt(String data, String masterPassword) throws NoSuchPaddingException, NoSuchAlgorithmException, InvalidKeyException, BadPaddingException, IllegalBlockSizeException {
         Key key = generateKey(masterPassword);
