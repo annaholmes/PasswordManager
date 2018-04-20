@@ -1,9 +1,7 @@
-package main.java.Unsorted;
-
+package Unsorted;
+import Encryption.Encryption;
 import java.sql.*;
 import java.util.ArrayList;
-import static main.java.Encryption.Encryption.decryptTuple;
-import static main.java.Encryption.Encryption.encryptTuple;
 
 public class Database {
 	private Connection con;
@@ -22,7 +20,7 @@ public class Database {
     }
 
     public void addPassword(Tuple<String> labelAndPassword) throws Exception {
-        Tuple<String> encrypted = encryptTuple(labelAndPassword, masterPassword);
+        Tuple<String> encrypted = Encryption.encryptTuple(labelAndPassword, masterPassword);
         stat.execute("INSERT INTO Passwords VALUES ('" + encrypted.getFirst() + ", '" + encrypted.getSecond() + "')");
     }
 
@@ -32,14 +30,14 @@ public class Database {
         ResultSet results = stat.getResultSet();
         while (results.next()) {
             Tuple<String> encrypted = new Tuple(results.getString("Label"), results.getString("Password"));
-        	passwords.add(decryptTuple(encrypted, masterPassword));
+        	passwords.add(Encryption.decryptTuple(encrypted, masterPassword));
         }
         return passwords;
     }
 
     public void editData(Tuple<String> oldLabelAndPassword, Tuple<String> newLabelAndPassword) throws Exception {
-        oldLabelAndPassword = encryptTuple(oldLabelAndPassword, masterPassword);
-        newLabelAndPassword = encryptTuple(newLabelAndPassword, masterPassword);
+        oldLabelAndPassword = Encryption.encryptTuple(oldLabelAndPassword, masterPassword);
+        newLabelAndPassword = Encryption.encryptTuple(newLabelAndPassword, masterPassword);
         stat.execute("SELECT * FROM Passwords WHERE Label = '" + oldLabelAndPassword.getFirst() + "'");
         ResultSet results = stat.getResultSet();
         if (results.next()) {
@@ -48,7 +46,7 @@ public class Database {
     }
 
     public void deletePassword(Tuple<String> labelAndPassword) throws Exception {
-    	labelAndPassword = encryptTuple(labelAndPassword, masterPassword);
+    	labelAndPassword = Encryption.encryptTuple(labelAndPassword, masterPassword);
     	stat.execute("SELECT * FROM Passwords WHERE Label = '" + labelAndPassword.getFirst() + "'");
     	ResultSet results = stat.getResultSet();
     	if (results.next()) {

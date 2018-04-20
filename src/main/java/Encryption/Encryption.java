@@ -1,6 +1,6 @@
-package main.java.Encryption;
+package Encryption;
 
-import main.java.Unsorted.Tuple;
+import Unsorted.Tuple;
 
 import javax.crypto.BadPaddingException;
 import javax.crypto.Cipher;
@@ -17,8 +17,6 @@ public class Encryption {
     //Modified code from https://gist.github.com/SimoneStefani/99052e8ce0550eb7725ca8681e4225c5
     private static final String ALGO = "AES";
     public static Tuple<String> encryptTuple(Tuple<String> tuple, String masterPassword) throws Exception {
-
-
 
         //Thing
         String username = tuple.getFirst();
@@ -55,7 +53,7 @@ public class Encryption {
         System.gc();
         return Base64.getEncoder().encodeToString(encVal);
     }
-    public static Optional<String> decrypt(String encryptedData, String masterPassword) throws WrongPasswordException, WrongPasswordException {
+    public static Optional<String> decrypt(String encryptedData, String masterPassword) throws WrongPasswordException {
         try {
             Key key = generateKey(masterPassword);
             Cipher c = Cipher.getInstance(ALGO);

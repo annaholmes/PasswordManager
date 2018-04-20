@@ -1,9 +1,8 @@
-package main.java.Unsorted;
+package Unsorted;
 
 public class Tuple<E> {
 
-    private E first;
-    private E second;
+    private E first,second;
 
     public Tuple(E first, E second) {
         this.first = first;
