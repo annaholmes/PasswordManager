@@ -13,7 +13,6 @@ public class LoginValidation {
         String salt = BCrypt.gensalt();
         String hashed = BCrypt.hashpw(password, salt);
         // TODO store password in database
-
     }
 
     public Boolean doesPasswordExist() {

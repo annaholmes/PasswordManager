@@ -1,4 +1,5 @@
 package OtherStuff;
+import java.util.ArrayList;
 import java.util.Random;
 import java.util.stream.IntStream;
 
@@ -34,20 +35,36 @@ public class PasswordGenerator {
     public String generate() {
         Random rand = new Random();
         char[] password = new char[maxLength];
-        int[] valid = new int[maxLength];
-        for (int i = 0; i < valid.length; i++) {
-            valid[i] = i;
+        ArrayList<Integer> valid = new ArrayList<>();
+        for (int i = 0; i < maxLength; i++) {
+            valid.add(i);
         }
         if (hasSpecialChar) {
-            int index = valid[rand.nextInt(valid.length)];
+            int index = valid.get(rand.nextInt(valid.size() - 1));
             password[index] = getRandomChar(specialChars);
+            valid.remove(index);
         } if (hasUpperCase) {
-            //password[index] = getRandomChar(upperAlphabet);
+            int index = valid.get(rand.nextInt(valid.size() - 1));
+            password[index] = getRandomChar(upperAlphabet);
+            valid.remove(index);
+        } if (hasLowerCase) {
+            int index = valid.get(rand.nextInt(valid.size() - 1));
+            password[index] = getRandomChar(lowerAlphabet);
+            valid.remove(index);
+        } if (hasNumber) {
+            int index = valid.get(rand.nextInt(valid.size() - 1));
+            password[index] = getRandomChar(numbers);
+            valid.remove(index);
         }
-        return "";
+        for (int i = 0; i < maxLength; i++) {
+            if ((password[i]) == '\0') {
+                int charSetChoice = rand.nextInt(3);
+                int[][] charSets = new int[][]{specialChars,upperAlphabet,lowerAlphabet,numbers};
+                password[i] = getRandomChar(charSets[charSetChoice]);
+            }
+        }
+        return String.valueOf(password);
     }
-
-    //public int[] setChar(int index, int[] )
 
     public void setMaxLength(int maxLength) {
         this.maxLength = maxLength;
@@ -70,6 +87,8 @@ public class PasswordGenerator {
     }
 
     public static void main(String[] args) {
-        System.out.println(getRandomChar(upperAlphabet) + getRandomChar(lowerAlphabet) + getRandomChar(specialChars) + getRandomChar(numbers));
+        PasswordGenerator pg = new PasswordGenerator();
+        pg.maxLength = 20;
+        System.out.println(pg.generate());
     }
 }

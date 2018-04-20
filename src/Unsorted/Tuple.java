@@ -24,4 +24,5 @@ public class Tuple<E> {
     public void setPassword(E second) {
         this.password = second;
     }
+
 }

@@ -40,7 +40,7 @@ public class Encryption {
         password = decrypt(password, masterPassword).get();
 
         Tuple output = new Tuple(username, password);
-        
+
         return output;
 
     }
