@@ -20,8 +20,16 @@ public class Database {
     }
 
     public void addPassword(Tuple<String> labelAndPassword) throws Exception {
-        Tuple<String> encrypted = Encryption.encryptTuple(labelAndPassword, masterPassword);
-        stat.execute("INSERT INTO Passwords VALUES ('" + encrypted.getFirst() + ", '" + encrypted.getSecond() + "')");
+    	Tuple<String> encrypted = Encryption.encryptTuple(labelAndPassword, masterPassword);
+    	stat.execute("SELECT * FROM Passwords WHERE Label = '" + encrypted.getFirst() + "'");
+    	ResultSet results = stat.getResultSet();
+    	if (!results.next()) {
+    		PreparedStatement add = con.prepareStatement("INSERT INTO Passwords VALUES (?, ?)");
+    		add.setString(1, encrypted.getFirst());
+    		add.setString(2, encrypted.getSecond());
+    		add.execute();
+    	}
+    	results.close();
     }
 
     public ArrayList<Tuple<String>> getPasswords() throws SQLException, Exception {
@@ -38,10 +46,15 @@ public class Database {
     public void editData(Tuple<String> oldLabelAndPassword, Tuple<String> newLabelAndPassword) throws Exception {
         oldLabelAndPassword = Encryption.encryptTuple(oldLabelAndPassword, masterPassword);
         newLabelAndPassword = Encryption.encryptTuple(newLabelAndPassword, masterPassword);
-        stat.execute("SELECT * FROM Passwords WHERE Label = '" + oldLabelAndPassword.getFirst() + "'");
-        ResultSet results = stat.getResultSet();
+        PreparedStatement edit = con.prepareStatement("SELECT * FROM Passwords WHERE Label = ?");
+        edit.setString(1, oldLabelAndPassword.getFirst());
+        ResultSet results = edit.executeQuery();
         if (results.next()) {
-        	stat.execute("UPDATE Passwords SET Label = '" + newLabelAndPassword.getFirst() + "', Password = '" + newLabelAndPassword.getSecond() + "' WHERE Label = '" + oldLabelAndPassword.getFirst() + "'");
+        	PreparedStatement update = con.prepareStatement("UPDATE Passwords SET Label = ?, Password = ? WHERE Label = ?");
+        	update.setString(1, newLabelAndPassword.getFirst());
+        	update.setString(2, newLabelAndPassword.getSecond());
+        	update.setString(3, oldLabelAndPassword.getFirst());
+        	update.execute();
         }
     }
 
