@@ -60,10 +60,13 @@ public class Database {
 
     public void deletePassword(Tuple<String> labelAndPassword) throws Exception {
     	labelAndPassword = Encryption.encryptTuple(labelAndPassword, masterPassword);
-    	stat.execute("SELECT * FROM Passwords WHERE Label = '" + labelAndPassword.getFirst() + "'");
-    	ResultSet results = stat.getResultSet();
+    	PreparedStatement search = con.prepareStatement("SELECT * FROM Passwords WHERE Label = ?");
+    	search.setString(1, labelAndPassword.getFirst());
+    	ResultSet results = search.executeQuery();
     	if (results.next()) {
-    		stat.execute("DELETE FROM Passwords WHERE Label = '" + labelAndPassword.getFirst() + "'");
+    		PreparedStatement delete = con.prepareStatement("DELETE FROM Passwords WHERE Label = ?");
+    		delete.setString(1, labelAndPassword.getFirst());
+    		delete.execute();
     	}
     	results.close();
     }
