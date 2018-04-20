@@ -17,12 +17,14 @@ public class Database {
         con = DriverManager.getConnection("jdbc:sqlite:Passwords");
         stat = con.createStatement();
         stat.execute("CREATE TABLE IF NOT EXISTS Passwords (Label TEXT, Password TEXT)");
+        stat.execute("CREATE TABLE IF NOT EXISTS Master (Password TEXT)");
     }
 
     public void addPassword(Tuple<String> labelAndPassword) throws Exception {
     	Tuple<String> encrypted = Encryption.encryptTuple(labelAndPassword, masterPassword);
-    	stat.execute("SELECT * FROM Passwords WHERE Label = '" + encrypted.getFirst() + "'");
-    	ResultSet results = stat.getResultSet();
+    	PreparedStatement search = con.prepareStatement("SELECT * FROM Passwords WHERE Label = ?");
+    	search.setString(1, encrypted.getFirst());
+    	ResultSet results = search.executeQuery();
     	if (!results.next()) {
     		PreparedStatement add = con.prepareStatement("INSERT INTO Passwords VALUES (?, ?)");
     		add.setString(1, encrypted.getFirst());
