@@ -4,16 +4,6 @@ import java.sql.*;
 import java.util.ArrayList;
 
 public class Database {
-<<<<<<< Updated upstream
-    private Connection con;
-    private Statement stat;
-    private String masterPassword;
-
-    public Database(String masterPassword) {
-        this.masterPassword = masterPassword;
-    }
-
-=======
 	private Connection con;
 	private Statement stat;
 	private String masterPassword;
@@ -22,7 +12,6 @@ public class Database {
 		this.masterPassword = "abc";
 	}
 	
->>>>>>> Stashed changes
     public void createDatabase() throws SQLException, ClassNotFoundException {
         Class.forName("org.sqlite.JDBC");
         con = DriverManager.getConnection("jdbc:sqlite:Passwords");
