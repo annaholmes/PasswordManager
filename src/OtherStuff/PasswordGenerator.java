@@ -18,7 +18,7 @@ public class PasswordGenerator {
 
     public static char getRandomChar(int[] charSet) {
         Random rand = new Random();
-        int selection = charSet[rand.nextInt(charSet.length)];
+        int selection = charSet[rand.nextInt(charSet.length - 1)];
         return (char) selection;
     }
 
@@ -40,21 +40,21 @@ public class PasswordGenerator {
             valid.add(i);
         }
         if (hasSpecialChar) {
-            int index = valid.get(rand.nextInt(valid.size() - 1));
+            int index = valid.get(rand.nextInt(valid.size()));
             password[index] = getRandomChar(specialChars);
-            valid.remove(index);
+            valid.remove((Integer)index);
         } if (hasUpperCase) {
-            int index = valid.get(rand.nextInt(valid.size() - 1));
+            int index = valid.get(rand.nextInt(valid.size()));
             password[index] = getRandomChar(upperAlphabet);
-            valid.remove(index);
+            valid.remove((Integer)index);
         } if (hasLowerCase) {
-            int index = valid.get(rand.nextInt(valid.size() - 1));
+            int index = valid.get(rand.nextInt(valid.size()));
             password[index] = getRandomChar(lowerAlphabet);
-            valid.remove(index);
+            valid.remove((Integer)index);
         } if (hasNumber) {
-            int index = valid.get(rand.nextInt(valid.size() - 1));
+            int index = valid.get(rand.nextInt(valid.size()));
             password[index] = getRandomChar(numbers);
-            valid.remove(index);
+            valid.remove((Integer)index);
         }
         for (int i = 0; i < maxLength; i++) {
             if ((password[i]) == '\0') {
