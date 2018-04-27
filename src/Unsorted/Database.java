@@ -29,6 +29,15 @@ public class Database {
     	add.setTimestamp(3, new java.sql.Timestamp(calendar.getTimeInMillis()));
     	add.execute();
     }
+    
+    public static void triesMaxed() throws SQLException {
+    	PreparedStatement update = con.prepareStatement("UPDATE Master SET Tries = ?, Next Attempt = ?");
+    	update.setInt(1, 0);
+    	Calendar calendar = Calendar.getInstance();
+    	calendar.add(30, Calendar.MINUTE);
+    	update.setTimestamp(2, new java.sql.Timestamp(calendar.getTimeInMillis()));
+    	update.execute();
+    }
 
     public static void addPassword(Tuple<String> labelAndPassword) throws Exception {
         Tuple<String> encrypted = Encryption.encryptTuple(labelAndPassword, masterPassword);
