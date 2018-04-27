@@ -17,7 +17,7 @@ public class Database {
         con = DriverManager.getConnection("jdbc:sqlite:Passwords");
         stat = con.createStatement();
         stat.execute("CREATE TABLE IF NOT EXISTS Passwords (Label TEXT, Password TEXT)");
-        stat.execute("CREATE TABLE IF NOT EXISTS Master (Password TEXT, Tries INTEGER, Next Attempt TIMESTAMP)");
+        stat.execute("CREATE TABLE IF NOT EXISTS Master (Password TEXT, Tries INTEGER, Next Attempt TIME)");
     }
 
     public void addPassword(Tuple<String> labelAndPassword) throws Exception {
