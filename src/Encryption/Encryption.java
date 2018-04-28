@@ -47,7 +47,8 @@ public class Encryption {
             }
             return output;
     }
-    public static String encrypt(String data, String masterPassword) throws NoSuchPaddingException, NoSuchAlgorithmException, InvalidKeyException, BadPaddingException, IllegalBlockSizeException {
+    public static String encrypt(String data, String masterPassword) throws NoSuchPaddingException, NoSuchAlgorithmException, InvalidKeyException, BadPaddingException, IllegalBlockSizeException, NoMasterPasswordException {
+      if(masterPassword==null) throw new NoMasterPasswordException();
         Key key = generateKey(masterPassword);
         Cipher c = Cipher.getInstance(ALGO);
         c.init(Cipher.ENCRYPT_MODE, key);
@@ -82,6 +83,7 @@ public class Encryption {
     }
 
     private static Key generateKey(String masterPassword) {
+        System.out.println("Master password:" + masterPassword);
         int numberSpaces = 16-masterPassword.length();
         for(int i=0;i<numberSpaces;i++){
             masterPassword+=" ";
