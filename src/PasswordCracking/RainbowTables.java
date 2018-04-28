@@ -26,7 +26,12 @@ public class RainbowTables {
         }
         return Optional.empty();
     }
-    public static void main(String[] args) throws IOException {
-        System.out.println(search("password").get());
+    public static double secondsToCrackPassword(String plaintext) throws IOException {
+        long start = System.currentTimeMillis();
+        search(plaintext);
+        long end = System.currentTimeMillis();
+        long delta = end - start;
+        double elapsedSeconds = delta / 1000.0;
+        return elapsedSeconds;
     }
 }

@@ -2,13 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3cbd1320-3451-4393-ada2-ed50dbd51577" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/Libs/hamcrest-core-1.3.jar" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Libs.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Libs.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/.gitmodules" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/out/production/PasswordManager/PasswordCracking/BruteForce.class" afterPath="$PROJECT_DIR$/out/production/PasswordManager/PasswordCracking/BruteForce.class" />
-      <change beforePath="$PROJECT_DIR$/out/production/PasswordManager/PasswordCracking/RainbowTables.class" afterPath="$PROJECT_DIR$/out/production/PasswordManager/PasswordCracking/RainbowTables.class" />
-      <change beforePath="$PROJECT_DIR$/src/Encryption/EncryptionTest.java" afterPath="$PROJECT_DIR$/src/Encryption/EncryptionTest.java" />
-      <change beforePath="$PROJECT_DIR$/src/LoginValidation/LoginTests.java" afterPath="$PROJECT_DIR$/src/LoginValidation/LoginTests.java" />
+      <change beforePath="$PROJECT_DIR$/Passwords" afterPath="$PROJECT_DIR$/Passwords" />
+      <change beforePath="$PROJECT_DIR$/out/production/PasswordManager/Encryption/Encryption.class" afterPath="$PROJECT_DIR$/out/production/PasswordManager/Encryption/Encryption.class" />
+      <change beforePath="$PROJECT_DIR$/src/Encryption/Encryption.java" afterPath="$PROJECT_DIR$/src/Encryption/Encryption.java" />
+      <change beforePath="$PROJECT_DIR$/src/PasswordCracking/RainbowTables.java" afterPath="$PROJECT_DIR$/src/PasswordCracking/RainbowTables.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -27,150 +26,22 @@
     </SUITE>
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Database.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Unsorted/Database.java">
+    <leaf>
+      <file leaf-file-name="BruteForce.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/PasswordCracking/BruteForce.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-32">
-              <caret line="11" column="34" lean-forward="false" selection-start-line="11" selection-start-column="34" selection-end-line="11" selection-end-column="34" />
-              <folding>
-                <element signature="e#223#224#0" expanded="true" />
-                <element signature="e#257#258#0" expanded="true" />
-                <marker date="1524246311910" expanded="true" signature="510:574" ph="CREATE TABLE... Passwords" />
-                <marker date="1524246311910" expanded="true" signature="600:649" ph="CREATE TABLE... Master" />
-                <marker date="1524246311910" expanded="true" signature="889:928" ph="SELECT * FRO... Passwords" />
-                <marker date="1524246311910" expanded="true" signature="1123:1158" ph="INSERT INTO Passwords... " />
-                <marker date="1524246311910" expanded="true" signature="1524:1547" ph="SELECT * FRO... Passwords" />
-                <marker date="1524246311910" expanded="true" signature="2080:2119" ph="SELECT * FRO... Passwords" />
-                <marker date="1524246311910" expanded="true" signature="2820:2859" ph="SELECT * FRO... Passwords" />
-                <marker date="1524246311910" expanded="true" signature="3062:3122" ph="UPDATE Passwords... " />
-                <marker date="1524246311910" expanded="true" signature="3596:3635" ph="SELECT * FRO... Passwords" />
-                <marker date="1524246311910" expanded="true" signature="3839:3876" ph="DELETE FROM Passwords... " />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="LoginTests.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/LoginValidation/LoginTests.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="75">
-              <caret line="6" column="9" lean-forward="true" selection-start-line="6" selection-start-column="9" selection-end-line="6" selection-end-column="9" />
+            <state relative-caret-position="420">
+              <caret line="30" column="1" lean-forward="true" selection-start-line="30" selection-start-column="1" selection-end-line="30" selection-end-column="1" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="EncryptionTest.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Encryption/EncryptionTest.java">
+      <file leaf-file-name="RainbowTables.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/PasswordCracking/RainbowTables.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="18">
-              <caret line="7" column="0" lean-forward="false" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Launcher.class" pinned="false" current-in-tab="false">
-        <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_131.jdk/Contents/Home/jre/lib/rt.jar!/sun/misc/Launcher.class">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="355">
-              <caret line="72" column="0" lean-forward="false" selection-start-line="72" selection-start-column="0" selection-end-line="72" selection-end-column="0" />
-              <folding>
-                <marker date="1489567893000" expanded="false" signature="3:117" ph="/.../" />
-                <marker date="1489567893000" expanded="true" signature="472:495" ph="{}" />
-                <marker date="1489567893000" expanded="true" signature="519:542" ph="{}" />
-                <marker date="1489567893000" expanded="true" signature="594:617" ph="{}" />
-                <marker date="1489567893000" expanded="true" signature="683:706" ph="{}" />
-                <marker date="1489567893000" expanded="true" signature="775:798" ph="{}" />
-                <marker date="1489567893000" expanded="true" signature="867:890" ph="{}" />
-                <marker date="1489567893000" expanded="true" signature="946:969" ph="{}" />
-                <marker date="1489567893000" expanded="true" signature="1048:1263" ph="{...}" />
-                <marker date="1489567893000" expanded="true" signature="1125:1148" ph="{}" />
-                <marker date="1489567893000" expanded="true" signature="1234:1257" ph="{}" />
-                <marker date="1489567893000" expanded="true" signature="1310:1428" ph="{...}" />
-                <marker date="1489567893000" expanded="true" signature="1399:1422" ph="{}" />
-                <marker date="1489567893000" expanded="true" signature="1494:2321" ph="{...}" />
-                <marker date="1489567893000" expanded="true" signature="1662:1685" ph="{}" />
-                <marker date="1489567893000" expanded="true" signature="1766:1789" ph="{}" />
-                <marker date="1489567893000" expanded="true" signature="1906:1929" ph="{}" />
-                <marker date="1489567893000" expanded="true" signature="2036:2059" ph="{}" />
-                <marker date="1489567893000" expanded="true" signature="2138:2161" ph="{}" />
-                <marker date="1489567893000" expanded="true" signature="2292:2315" ph="{}" />
-                <marker date="1489567893000" expanded="true" signature="2387:3121" ph="{...}" />
-                <marker date="1489567893000" expanded="true" signature="2491:2514" ph="{}" />
-                <marker date="1489567893000" expanded="true" signature="2557:2580" ph="{}" />
-                <marker date="1489567893000" expanded="true" signature="2661:2684" ph="{}" />
-                <marker date="1489567893000" expanded="true" signature="2737:2760" ph="{}" />
-                <marker date="1489567893000" expanded="true" signature="2860:2883" ph="{}" />
-                <marker date="1489567893000" expanded="true" signature="2949:2972" ph="{}" />
-                <marker date="1489567893000" expanded="true" signature="3092:3115" ph="{}" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Controller.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Unsorted/Controller.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1061">
-              <caret line="68" column="0" lean-forward="false" selection-start-line="68" selection-start-column="0" selection-end-line="68" selection-end-column="0" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="BCrypt.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/LoginValidation/BCrypt.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="915">
-              <caret line="62" column="13" lean-forward="false" selection-start-line="62" selection-start-column="13" selection-end-line="62" selection-end-column="13" />
-              <folding>
-                <element signature="e#0#28015#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="LoginValidation.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/LoginValidation/LoginValidation.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="375">
-              <caret line="25" column="5" lean-forward="false" selection-start-line="25" selection-start-column="5" selection-end-line="25" selection-end-column="5" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Encryption.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Encryption/Encryption.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-427">
-              <caret line="17" column="95" lean-forward="false" selection-start-line="17" selection-start-column="25" selection-end-line="17" selection-end-column="95" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="WrongPasswordException.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Encryption/WrongPasswordException.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="30">
-              <caret line="2" column="13" lean-forward="false" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="PasswordLabel.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Unsorted/PasswordLabel.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="30">
-              <caret line="2" column="13" lean-forward="false" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+            <state relative-caret-position="450">
+              <caret line="34" column="30" lean-forward="false" selection-start-line="34" selection-start-column="30" selection-end-line="34" selection-end-column="30" />
               <folding />
             </state>
           </provider>
@@ -203,14 +74,14 @@
       <list>
         <option value="$PROJECT_DIR$/src/LoginValidation.java" />
         <option value="$PROJECT_DIR$/src/Unsorted/Tuple.java" />
-        <option value="$PROJECT_DIR$/src/Encryption/Encryption.java" />
         <option value="$PROJECT_DIR$/src/Unsorted/Database.java" />
         <option value="$PROJECT_DIR$/src/OtherStuff/PasswordGenerator.java" />
         <option value="$PROJECT_DIR$/src/LoginValidation/LoginValidation.java" />
         <option value="$PROJECT_DIR$/src/PasswordCracking/BruteForce.java" />
-        <option value="$PROJECT_DIR$/src/PasswordCracking/RainbowTables.java" />
         <option value="$PROJECT_DIR$/src/Encryption/EncryptionTest.java" />
         <option value="$PROJECT_DIR$/src/LoginValidation/LoginTests.java" />
+        <option value="$PROJECT_DIR$/src/Encryption/Encryption.java" />
+        <option value="$PROJECT_DIR$/src/PasswordCracking/RainbowTables.java" />
       </list>
     </option>
   </component>
@@ -242,6 +113,10 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
+      <pane id="Scratches" />
+      <pane id="PackagesPane" />
+      <pane id="AndroidView" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -293,10 +168,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
-      <pane id="Scratches" />
-      <pane id="AndroidView" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -331,7 +202,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.LoginTests">
+  <component name="RunManager" selected="Application.Main">
     <configuration default="true" type="Applet" factoryName="Applet">
       <option name="WIDTH" value="400" />
       <option name="HEIGHT" value="300" />
@@ -522,11 +393,11 @@
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="JUnit.LoginTests" />
-        <item index="1" class="java.lang.String" itemvalue="JUnit.EncryptionTest" />
-        <item index="2" class="java.lang.String" itemvalue="Application.RainbowTables" />
-        <item index="3" class="java.lang.String" itemvalue="Application.LoginValidation" />
-        <item index="4" class="java.lang.String" itemvalue="Application.Main" />
+        <item index="0" class="java.lang.String" itemvalue="Application.Main" />
+        <item index="1" class="java.lang.String" itemvalue="JUnit.LoginTests" />
+        <item index="2" class="java.lang.String" itemvalue="JUnit.EncryptionTest" />
+        <item index="3" class="java.lang.String" itemvalue="Application.RainbowTables" />
+        <item index="4" class="java.lang.String" itemvalue="Application.LoginValidation" />
       </list>
     </recent_temporary>
   </component>
@@ -552,7 +423,11 @@
       <workItem from="1524189855893" duration="4833000" />
       <workItem from="1524241002451" duration="2519000" />
       <workItem from="1524245442186" duration="1364000" />
-      <workItem from="1524346547359" duration="1335000" />
+      <workItem from="1524346547359" duration="1402000" />
+      <workItem from="1524421808450" duration="732000" />
+      <workItem from="1524492523507" duration="16000" />
+      <workItem from="1524525465931" duration="331000" />
+      <workItem from="1524878019301" duration="177000" />
     </task>
     <servers />
   </component>
@@ -577,42 +452,42 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="10139000" />
+    <option name="totallyTimeSpent" value="11462000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39938557" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32826748" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32741618" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.41486812" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.41420117" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3298611" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
       <window_info id="Floobits" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2673611" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="JProfiler" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Learn" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39938557" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3298611" sideWeight="0.5" order="4" side_tool="true" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -629,537 +504,18 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/Encryption/EncryptionTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="6" column="13" lean-forward="false" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Unsorted/Database.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1230">
-          <caret line="86" column="1" lean-forward="false" selection-start-line="86" selection-start-column="1" selection-end-line="86" selection-end-column="1" />
-          <folding>
-            <element signature="e#223#224#0" expanded="true" />
-            <element signature="e#257#258#0" expanded="true" />
-            <marker date="1524246311910" expanded="true" signature="510:574" ph="CREATE TABLE... Passwords" />
-            <marker date="1524246311910" expanded="true" signature="600:649" ph="CREATE TABLE... Master" />
-            <marker date="1524246311910" expanded="true" signature="889:928" ph="SELECT * FRO... Passwords" />
-            <marker date="1524246311910" expanded="true" signature="1123:1158" ph="INSERT INTO Passwords... " />
-            <marker date="1524246311910" expanded="true" signature="1524:1547" ph="SELECT * FRO... Passwords" />
-            <marker date="1524246311910" expanded="true" signature="2080:2119" ph="SELECT * FRO... Passwords" />
-            <marker date="1524246311910" expanded="true" signature="2820:2859" ph="SELECT * FRO... Passwords" />
-            <marker date="1524246311910" expanded="true" signature="3062:3122" ph="UPDATE Passwords... " />
-            <marker date="1524246311910" expanded="true" signature="3596:3635" ph="SELECT * FRO... Passwords" />
-            <marker date="1524246311910" expanded="true" signature="3839:3876" ph="DELETE FROM Passwords... " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Unsorted/Tuple.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="13" lean-forward="false" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/PasswordCracking/BruteForce.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="24" column="0" lean-forward="false" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
-          <folding>
-            <element signature="e#847#848#0" expanded="false" />
-            <element signature="e#889#890#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Encryption/WrongPasswordException.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="7" column="0" lean-forward="false" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+        <state relative-caret-position="420">
+          <caret line="30" column="1" lean-forward="true" selection-start-line="30" selection-start-column="1" selection-end-line="30" selection-end-column="1" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/GUI.fxml">
-      <provider editor-type-id="JavaFX-Scene-Builder">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/OtherStuff/PasswordGenerator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="510">
-          <caret line="35" column="35" lean-forward="true" selection-start-line="35" selection-start-column="35" selection-end-line="35" selection-end-column="35" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Encryption/EncryptionTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="6" column="13" lean-forward="false" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Unsorted/Database.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="795">
-          <caret line="57" column="0" lean-forward="true" selection-start-line="57" selection-start-column="0" selection-end-line="57" selection-end-column="0" />
-          <folding>
-            <element signature="e#223#224#0" expanded="true" />
-            <element signature="e#257#258#0" expanded="true" />
-            <marker date="1524246311910" expanded="true" signature="510:574" ph="CREATE TABLE... Passwords" />
-            <marker date="1524246311910" expanded="true" signature="600:649" ph="CREATE TABLE... Master" />
-            <marker date="1524246311910" expanded="true" signature="889:928" ph="SELECT * FRO... Passwords" />
-            <marker date="1524246311910" expanded="true" signature="1123:1158" ph="INSERT INTO Passwords... " />
-            <marker date="1524246311910" expanded="true" signature="1524:1547" ph="SELECT * FRO... Passwords" />
-            <marker date="1524246311910" expanded="true" signature="2080:2119" ph="SELECT * FRO... Passwords" />
-            <marker date="1524246311910" expanded="true" signature="2820:2859" ph="SELECT * FRO... Passwords" />
-            <marker date="1524246311910" expanded="true" signature="3062:3122" ph="UPDATE Passwords... " />
-            <marker date="1524246311910" expanded="true" signature="3596:3635" ph="SELECT * FRO... Passwords" />
-            <marker date="1524246311910" expanded="true" signature="3839:3876" ph="DELETE FROM Passwords... " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Unsorted/Tuple.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="13" lean-forward="false" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Encryption/Encryption.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1290">
-          <caret line="86" column="52" lean-forward="true" selection-start-line="86" selection-start-column="52" selection-end-line="86" selection-end-column="52" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/PasswordManager.iml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/GUI.fxml">
-      <provider editor-type-id="JavaFX-Scene-Builder">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="5" column="13" lean-forward="false" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Popup.fxml">
-      <provider editor-type-id="JavaFX-Scene-Builder">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-590">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Unsorted/Controller.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-25">
-          <caret line="10" column="13" lean-forward="false" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Encryption/WrongPasswordException.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="13" lean-forward="false" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Encryption/EncryptionTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="6" column="13" lean-forward="false" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Encryption/Encryption.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="174">
-          <caret line="81" column="29" lean-forward="false" selection-start-line="81" selection-start-column="29" selection-end-line="81" selection-end-column="29" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Unsorted/Database.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-311">
-          <caret line="5" column="13" lean-forward="false" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
-          <folding>
-            <element signature="e#223#224#0" expanded="true" />
-            <element signature="e#257#258#0" expanded="true" />
-            <marker date="1524246311910" expanded="true" signature="510:574" ph="CREATE TABLE... Passwords" />
-            <marker date="1524246311910" expanded="true" signature="600:649" ph="CREATE TABLE... Master" />
-            <marker date="1524246311910" expanded="true" signature="889:928" ph="SELECT * FRO... Passwords" />
-            <marker date="1524246311910" expanded="true" signature="1123:1158" ph="INSERT INTO Passwords... " />
-            <marker date="1524246311910" expanded="true" signature="1524:1547" ph="SELECT * FRO... Passwords" />
-            <marker date="1524246311910" expanded="true" signature="2080:2119" ph="SELECT * FRO... Passwords" />
-            <marker date="1524246311910" expanded="true" signature="2820:2859" ph="SELECT * FRO... Passwords" />
-            <marker date="1524246311910" expanded="true" signature="3062:3122" ph="UPDATE Passwords... " />
-            <marker date="1524246311910" expanded="true" signature="3596:3635" ph="SELECT * FRO... Passwords" />
-            <marker date="1524246311910" expanded="true" signature="3839:3876" ph="DELETE FROM Passwords... " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Unsorted/Tuple.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="13" lean-forward="false" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Unsorted/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="8" column="13" lean-forward="false" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Unsorted/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Unsorted/Database.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="5" column="13" lean-forward="false" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
-          <folding>
-            <element signature="e#223#224#0" expanded="true" />
-            <element signature="e#257#258#0" expanded="true" />
-            <marker date="1524246311910" expanded="true" signature="510:574" ph="CREATE TABLE... Passwords" />
-            <marker date="1524246311910" expanded="true" signature="600:649" ph="CREATE TABLE... Master" />
-            <marker date="1524246311910" expanded="true" signature="889:928" ph="SELECT * FRO... Passwords" />
-            <marker date="1524246311910" expanded="true" signature="1123:1158" ph="INSERT INTO Passwords... " />
-            <marker date="1524246311910" expanded="true" signature="1524:1547" ph="SELECT * FRO... Passwords" />
-            <marker date="1524246311910" expanded="true" signature="2080:2119" ph="SELECT * FRO... Passwords" />
-            <marker date="1524246311910" expanded="true" signature="2820:2859" ph="SELECT * FRO... Passwords" />
-            <marker date="1524246311910" expanded="true" signature="3062:3122" ph="UPDATE Passwords... " />
-            <marker date="1524246311910" expanded="true" signature="3596:3635" ph="SELECT * FRO... Passwords" />
-            <marker date="1524246311910" expanded="true" signature="3839:3876" ph="DELETE FROM Passwords... " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/PasswordManager.iml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Popup.fxml">
-      <provider editor-type-id="JavaFX-Scene-Builder">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Unsorted/Controller.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="10" column="13" lean-forward="false" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/PasswordManager.iml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/GUI.fxml">
-      <provider editor-type-id="JavaFX-Scene-Builder">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Popup.fxml">
-      <provider editor-type-id="JavaFX-Scene-Builder">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-590">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/LoginValidation.java" />
-    <entry file="file://$PROJECT_DIR$/src/LoginValidation.java" />
-    <entry file="file://$PROJECT_DIR$/src/GUI.fxml">
-      <provider editor-type-id="JavaFX-Scene-Builder">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Unsorted/Database.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="388">
-          <caret line="35" column="35" lean-forward="true" selection-start-line="35" selection-start-column="35" selection-end-line="35" selection-end-column="35" />
-          <folding>
-            <element signature="e#223#224#0" expanded="true" />
-            <element signature="e#257#258#0" expanded="true" />
-            <marker date="1524246311910" expanded="true" signature="510:574" ph="CREATE TABLE... Passwords" />
-            <marker date="1524246311910" expanded="true" signature="600:649" ph="CREATE TABLE... Master" />
-            <marker date="1524246311910" expanded="true" signature="889:928" ph="SELECT * FRO... Passwords" />
-            <marker date="1524246311910" expanded="true" signature="1123:1158" ph="INSERT INTO Passwords... " />
-            <marker date="1524246311910" expanded="true" signature="1524:1547" ph="SELECT * FRO... Passwords" />
-            <marker date="1524246311910" expanded="true" signature="2080:2119" ph="SELECT * FRO... Passwords" />
-            <marker date="1524246311910" expanded="true" signature="2820:2859" ph="SELECT * FRO... Passwords" />
-            <marker date="1524246311910" expanded="true" signature="3062:3122" ph="UPDATE Passwords... " />
-            <marker date="1524246311910" expanded="true" signature="3596:3635" ph="SELECT * FRO... Passwords" />
-            <marker date="1524246311910" expanded="true" signature="3839:3876" ph="DELETE FROM Passwords... " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/passwordlist.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="615">
-          <caret line="41" column="6" lean-forward="false" selection-start-line="41" selection-start-column="0" selection-end-line="41" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_131.jdk/Contents/Home/src.zip!/java/util/Optional.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="114">
-          <caret line="134" column="0" lean-forward="false" selection-start-line="134" selection-start-column="0" selection-end-line="134" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/OtherStuff/PasswordGenerator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="200">
-          <caret line="88" column="3" lean-forward="true" selection-start-line="88" selection-start-column="3" selection-end-line="92" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/LoginValidation/LICENSE">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/PasswordCracking/BruteForce.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="405">
-          <caret line="29" column="0" lean-forward="false" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
-          <folding>
-            <element signature="e#847#848#0" expanded="false" />
-            <element signature="e#889#890#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/PasswordCracking/RainbowTables.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="480">
-          <caret line="32" column="0" lean-forward="false" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Unsorted/Tuple.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="13" lean-forward="false" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Unsorted/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="22" column="11" lean-forward="false" selection-start-line="22" selection-start-column="11" selection-end-line="22" selection-end-column="11" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Unsorted/PasswordLabel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="13" lean-forward="false" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Unsorted/Database.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-32">
-          <caret line="11" column="34" lean-forward="false" selection-start-line="11" selection-start-column="34" selection-end-line="11" selection-end-column="34" />
-          <folding>
-            <element signature="e#223#224#0" expanded="true" />
-            <element signature="e#257#258#0" expanded="true" />
-            <marker date="1524246311910" expanded="true" signature="510:574" ph="CREATE TABLE... Passwords" />
-            <marker date="1524246311910" expanded="true" signature="600:649" ph="CREATE TABLE... Master" />
-            <marker date="1524246311910" expanded="true" signature="889:928" ph="SELECT * FRO... Passwords" />
-            <marker date="1524246311910" expanded="true" signature="1123:1158" ph="INSERT INTO Passwords... " />
-            <marker date="1524246311910" expanded="true" signature="1524:1547" ph="SELECT * FRO... Passwords" />
-            <marker date="1524246311910" expanded="true" signature="2080:2119" ph="SELECT * FRO... Passwords" />
-            <marker date="1524246311910" expanded="true" signature="2820:2859" ph="SELECT * FRO... Passwords" />
-            <marker date="1524246311910" expanded="true" signature="3062:3122" ph="UPDATE Passwords... " />
-            <marker date="1524246311910" expanded="true" signature="3596:3635" ph="SELECT * FRO... Passwords" />
-            <marker date="1524246311910" expanded="true" signature="3839:3876" ph="DELETE FROM Passwords... " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Unsorted/Controller.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1061">
-          <caret line="68" column="0" lean-forward="false" selection-start-line="68" selection-start-column="0" selection-end-line="68" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/LoginValidation/BCrypt.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="915">
-          <caret line="62" column="13" lean-forward="false" selection-start-line="62" selection-start-column="13" selection-end-line="62" selection-end-column="13" />
-          <folding>
-            <element signature="e#0#28015#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_131.jdk/Contents/Home/jre/lib/rt.jar!/sun/misc/Launcher.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="355">
-          <caret line="72" column="0" lean-forward="false" selection-start-line="72" selection-start-column="0" selection-end-line="72" selection-end-column="0" />
-          <folding>
-            <marker date="1489567893000" expanded="false" signature="3:117" ph="/.../" />
-            <marker date="1489567893000" expanded="true" signature="472:495" ph="{}" />
-            <marker date="1489567893000" expanded="true" signature="519:542" ph="{}" />
-            <marker date="1489567893000" expanded="true" signature="594:617" ph="{}" />
-            <marker date="1489567893000" expanded="true" signature="683:706" ph="{}" />
-            <marker date="1489567893000" expanded="true" signature="775:798" ph="{}" />
-            <marker date="1489567893000" expanded="true" signature="867:890" ph="{}" />
-            <marker date="1489567893000" expanded="true" signature="946:969" ph="{}" />
-            <marker date="1489567893000" expanded="true" signature="1048:1263" ph="{...}" />
-            <marker date="1489567893000" expanded="true" signature="1125:1148" ph="{}" />
-            <marker date="1489567893000" expanded="true" signature="1234:1257" ph="{}" />
-            <marker date="1489567893000" expanded="true" signature="1310:1428" ph="{...}" />
-            <marker date="1489567893000" expanded="true" signature="1399:1422" ph="{}" />
-            <marker date="1489567893000" expanded="true" signature="1494:2321" ph="{...}" />
-            <marker date="1489567893000" expanded="true" signature="1662:1685" ph="{}" />
-            <marker date="1489567893000" expanded="true" signature="1766:1789" ph="{}" />
-            <marker date="1489567893000" expanded="true" signature="1906:1929" ph="{}" />
-            <marker date="1489567893000" expanded="true" signature="2036:2059" ph="{}" />
-            <marker date="1489567893000" expanded="true" signature="2138:2161" ph="{}" />
-            <marker date="1489567893000" expanded="true" signature="2292:2315" ph="{}" />
-            <marker date="1489567893000" expanded="true" signature="2387:3121" ph="{...}" />
-            <marker date="1489567893000" expanded="true" signature="2491:2514" ph="{}" />
-            <marker date="1489567893000" expanded="true" signature="2557:2580" ph="{}" />
-            <marker date="1489567893000" expanded="true" signature="2661:2684" ph="{}" />
-            <marker date="1489567893000" expanded="true" signature="2737:2760" ph="{}" />
-            <marker date="1489567893000" expanded="true" signature="2860:2883" ph="{}" />
-            <marker date="1489567893000" expanded="true" signature="2949:2972" ph="{}" />
-            <marker date="1489567893000" expanded="true" signature="3092:3115" ph="{}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Encryption/WrongPasswordException.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="13" lean-forward="false" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Encryption/Encryption.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-427">
-          <caret line="17" column="95" lean-forward="false" selection-start-line="17" selection-start-column="25" selection-end-line="17" selection-end-column="95" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Encryption/EncryptionTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="18">
-          <caret line="7" column="0" lean-forward="false" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/LoginValidation/LoginTests.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="6" column="9" lean-forward="true" selection-start-line="6" selection-start-column="9" selection-end-line="6" selection-end-column="9" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/LoginValidation/LoginValidation.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="25" column="5" lean-forward="false" selection-start-line="25" selection-start-column="5" selection-end-line="25" selection-end-column="5" />
+        <state relative-caret-position="450">
+          <caret line="34" column="30" lean-forward="false" selection-start-line="34" selection-start-column="30" selection-end-line="34" selection-end-column="30" />
           <folding />
         </state>
       </provider>

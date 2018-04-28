@@ -89,6 +89,7 @@ public class Encryption {
         System.out.println(masterPassword.length());
         byte[] keyValue = masterPassword.getBytes();
         System.gc();
+        SecretKeySpec secretKeySpec = new SecretKeySpec(keyValue, ALGO);
         return new SecretKeySpec(keyValue, ALGO);
     }
 
