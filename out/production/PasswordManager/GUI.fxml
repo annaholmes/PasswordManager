@@ -65,6 +65,7 @@
                            <children>
                               <TextField fx:id="labelField" promptText="Password Label..." HBox.hgrow="ALWAYS" />
                               <TextField fx:id="passwordField" promptText="Password..." HBox.hgrow="ALWAYS" />
+                              <Button fx:id="showButt" mnemonicParsing="false" onMousePressed="#show" onMouseReleased="#hide" text="Show" />
                               <Button fx:id="addPasswordButton" mnemonicParsing="false" onAction="#addPassword" text="Add Password" HBox.hgrow="NEVER" />
                               <Button fx:id="generateButton" mnemonicParsing="false" text="Generate Password" HBox.hgrow="NEVER" />
                            </children>
