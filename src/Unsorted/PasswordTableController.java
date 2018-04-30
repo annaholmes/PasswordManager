@@ -15,6 +15,8 @@ import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.scene.input.Clipboard;
+import javafx.scene.input.ClipboardContent;
 import javafx.scene.input.MouseButton;
 import javafx.scene.input.MouseEvent;
 import javafx.util.Callback;
@@ -78,8 +80,6 @@ public class PasswordTableController {
 		label.setCellValueFactory(cdf -> new SimpleStringProperty(cdf.getValue().getLabel()));
 		password.setCellValueFactory(cdf -> new SimpleStringProperty(cdf.getValue().getPassword()));
 		ContextMenu contextMenu = new ContextMenu();
-		MenuItem edit = new MenuItem("Edit");
-		contextMenu.getItems().add(edit);
 		MenuItem delete = new MenuItem("Delete");
 		contextMenu.getItems().add(delete);
 		MenuItem copy = new MenuItem("Copy to Clipboard");
@@ -120,6 +120,24 @@ public class PasswordTableController {
 				
 				}
 			});
+		
+		copy.setOnAction(new EventHandler<ActionEvent>() {
+			@Override
+			public void handle(ActionEvent event) {
+				// TODO Auto-generated method stub
+				PasswordLabel selectedColunm = table.getSelectionModel().getSelectedItem();
+				String label = selectedColunm.getLabel();
+				String password = passwordMap.get(label);
+				final Clipboard clipboard = Clipboard.getSystemClipboard();
+			    final ClipboardContent content = new ClipboardContent();
+			    content.putString(password);
+			    clipboard.setContent(content);
+				
+			
+				
+				}
+			});
+
 
 				
 		generator = new PasswordGenerator();
