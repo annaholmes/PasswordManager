@@ -1,39 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="3cbd1320-3451-4393-ada2-ed50dbd51577" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Controllers/BadNews.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Controllers/PopupController.java" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Passwords" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/PasswordManager/LoginGUI.fxml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/PasswordManager/MainGUI.fxml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/PasswordManager/Popup.fxml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/PasswordManager/Unsorted/Database.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/PasswordManager/Unsorted/Main.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/PasswordManager/Unsorted/Tuple.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/PasswordManager/pic.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/Unsorted/MainController.java~Updated upstream" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/LoginGUI.fxml" afterPath="$PROJECT_DIR$/src/Resources/LoginGUI.fxml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/MainGUI.fxml" afterPath="$PROJECT_DIR$/src/Resources/MainGUI.fxml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Popup.fxml" afterPath="$PROJECT_DIR$/src/Resources/Popup.fxml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Unsorted/Database.java" afterPath="$PROJECT_DIR$/src/Data/Database.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Unsorted/LoginController.java" afterPath="$PROJECT_DIR$/src/Controllers/LoginController.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Unsorted/Main.java" afterPath="$PROJECT_DIR$/src/Controllers/Main.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Unsorted/PasswordLabel.java" afterPath="$PROJECT_DIR$/src/Data/PasswordLabel.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Unsorted/PasswordTableController.java" afterPath="$PROJECT_DIR$/src/Controllers/PasswordTableController.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Unsorted/Tuple.java" afterPath="$PROJECT_DIR$/src/Data/Tuple.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/pic.png" afterPath="$PROJECT_DIR$/src/Resources/pic.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/PasswordManager/Encryption/Encryption.class" afterPath="$PROJECT_DIR$/out/production/PasswordManager/Encryption/Encryption.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/PasswordManager/Encryption/EncryptionTest.class" afterPath="$PROJECT_DIR$/out/production/PasswordManager/Encryption/EncryptionTest.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/PasswordManager/LoginValidation/LoginTests.class" afterPath="$PROJECT_DIR$/out/production/PasswordManager/LoginValidation/LoginTests.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/PasswordManager/LoginValidation/LoginValidation.class" afterPath="$PROJECT_DIR$/out/production/PasswordManager/LoginValidation/LoginValidation.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Encryption/Encryption.java" afterPath="$PROJECT_DIR$/src/Encryption/Encryption.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Encryption/EncryptionTest.java" afterPath="$PROJECT_DIR$/src/Encryption/EncryptionTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/LoginValidation/LoginTests.java" afterPath="$PROJECT_DIR$/src/LoginValidation/LoginTests.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/LoginValidation/LoginValidation.java" afterPath="$PROJECT_DIR$/src/LoginValidation/LoginValidation.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/OtherStuff/PasswordGenerator.java" afterPath="$PROJECT_DIR$/src/OtherStuff/PasswordGenerator.java" />
-    </list>
+    <list default="true" id="3cbd1320-3451-4393-ada2-ed50dbd51577" name="Default" comment="" />
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -644,7 +612,7 @@
       <workItem from="1524346547359" duration="1335000" />
       <workItem from="1524771577478" duration="31000" />
       <workItem from="1524878475842" duration="497000" />
-      <workItem from="1525059960994" duration="17717000" />
+      <workItem from="1525059960994" duration="17859000" />
     </task>
     <servers />
   </component>
@@ -669,7 +637,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="28384000" />
+    <option name="totallyTimeSpent" value="28526000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="344" y="22" width="1022" height="746" extended-state="0" />
