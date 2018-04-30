@@ -1,6 +1,6 @@
 package Encryption;
 
-import Unsorted.Tuple;
+import Data.Tuple;
 import org.junit.Assert;
 import org.junit.Test;
 

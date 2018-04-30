@@ -33,6 +33,7 @@ public class PasswordGenerator {
     }
 
     public String generate() {
+
         Random rand = new Random();
         char[] password = new char[maxLength];
         ArrayList<Integer> valid = new ArrayList<>();
@@ -67,7 +68,11 @@ public class PasswordGenerator {
     }
 
     public void setMaxLength(int maxLength) {
-        this.maxLength = maxLength;
+        if (maxLength < 4) {
+            this.maxLength = 4;
+        } else {
+            this.maxLength = maxLength;
+        }
     }
 
     public void setHasSpecialChar(boolean hasSpecialChar) {
@@ -86,9 +91,4 @@ public class PasswordGenerator {
         this.hasNumber = hasNumber;
     }
 
-    public static void main(String[] args) {
-        PasswordGenerator pg = new PasswordGenerator();
-        pg.maxLength = 20;
-        System.out.println(pg.generate());
-    }
 }

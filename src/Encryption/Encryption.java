@@ -1,6 +1,6 @@
 package Encryption;
 
-import Unsorted.Tuple;
+import Data.Tuple;
 
 import javax.crypto.BadPaddingException;
 import javax.crypto.Cipher;

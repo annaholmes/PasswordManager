@@ -1,4 +1,4 @@
-package Unsorted;
+package Data;
 
 public class Tuple<E> {
 
