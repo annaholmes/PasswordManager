@@ -8,11 +8,19 @@ import java.util.Calendar;
 public class Database {
 	private static Connection con;
 	private static Statement stat;
-	private static String masterPassword;
-	
-    public static void createDatabase() throws SQLException, ClassNotFoundException {
+
+    public static String getMasterPassword() {
+        return masterPassword;
+    }
+
+    private static String masterPassword;
+
+	public Database() throws ClassNotFoundException, SQLException {
         Class.forName("org.sqlite.JDBC");
         con = DriverManager.getConnection("jdbc:sqlite:Passwords");
+    }
+	
+    public static void createTables() throws SQLException, ClassNotFoundException {
         stat = con.createStatement();
         stat.execute("CREATE TABLE IF NOT EXISTS Passwords (Label TEXT, Password TEXT)");
         stat.execute("CREATE TABLE IF NOT EXISTS Master (Password TEXT, Tries INTEGER, Next Attempt TIMESTAMP)");
