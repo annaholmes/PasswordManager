@@ -24,7 +24,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 
-public class LogInController {
+public class PasswordTableController {
 	
 	private String hide = "**********";
 
@@ -124,7 +124,8 @@ public class LogInController {
 				
 		generator = new PasswordGenerator();
 		database = new Database();
-		database.createDatabase();
+		database.createTables();
+		database.setMasterPassword("abc");
 		data = database.getAllPasswords();
 		for (Tuple t: data) {
 			passwordMap.put((String)t.getLabel(), (String)t.getPassword());

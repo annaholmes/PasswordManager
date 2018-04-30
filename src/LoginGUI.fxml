@@ -9,7 +9,7 @@
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane minHeight="100.0" minWidth="200.0" prefHeight="400.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/9" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Unsorted.MainController">
+<AnchorPane minHeight="100.0" minWidth="200.0" prefHeight="400.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/9" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Unsorted.LoginController">
    <children>
 
       <TextField fx:id="password" layoutX="46.0" layoutY="113.0" promptText="Type Password here " />

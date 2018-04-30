@@ -15,7 +15,7 @@ import javafx.scene.control.TextField;
 import javafx.scene.image.ImageView;
 import javafx.stage.Stage;
 
-public class StartController {
+public class MainController {
 @FXML 
 Button loginButton;
 
@@ -28,7 +28,6 @@ TextField password;
 Stage stage = Main.getStage();
 
 private void initialize() {
-
 	
 }
 @FXML
