@@ -130,6 +130,8 @@ public class PasswordTableController {
 		// https://gist.github.com/abhinayagarwal/9735744
 
 		TableColumn show_col = new TableColumn<>();
+		show_col.setMinWidth(100);
+
 		table.getColumns().add(show_col);
 
 		show_col.setCellValueFactory(
@@ -140,7 +142,9 @@ public class PasswordTableController {
 
 
 		TableColumn copy_col = new TableColumn<>();
+		copy_col.setMinWidth(150);
 		table.getColumns().add(copy_col);
+
 
 		copy_col.setCellValueFactory(
 				(Callback<TableColumn.CellDataFeatures<Disposer.Record, Boolean>, ObservableValue<Boolean>>) p -> new SimpleBooleanProperty(p.getValue() != null));
@@ -151,6 +155,8 @@ public class PasswordTableController {
 
 
 		TableColumn delete_col = new TableColumn<>();
+		delete_col.setMinWidth(100);
+
 		table.getColumns().add(delete_col);
 
 		delete_col.setCellValueFactory(
@@ -170,7 +176,6 @@ public class PasswordTableController {
 			PasswordLabel pl = new PasswordLabel((String) t.getLabel(), (String)t.getPassword(), isHiddenMap.get(t.getLabel()));
 			table.getItems().add(new PasswordLabel(pl.getLabel(),pl.getPassword(),pl.isHidden()));
 		}
-		System.out.println(data.toString());
 
 	}
 
@@ -254,7 +259,6 @@ public class PasswordTableController {
                 PasswordLabel currentRow = (PasswordLabel) ShowButton.this.getTableView().getItems().get(ShowButton.this.getIndex());
                 //remove selected item from the table list
                 currentRow.toggleHidden();
-                System.out.println(currentRow.getLabel() + " is hidden: " + currentRow.isHidden());
                 isHiddenMap.put(currentRow.getLabel(),currentRow.isHidden());
                 try {
                     update();

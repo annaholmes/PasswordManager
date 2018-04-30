@@ -49,7 +49,6 @@ public class Database {
         PreparedStatement update = con.prepareStatement("UPDATE Master SET Tries = ?");
         update.setInt(1, attemptedTries() + 1);
         update.execute();
-        System.out.println(attemptedTries());
     }
     
     public int attemptedTries() throws SQLException {

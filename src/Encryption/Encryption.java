@@ -83,12 +83,10 @@ public class Encryption {
     }
 
     private static Key generateKey(String masterPassword) {
-        System.out.println("Master password:" + masterPassword);
         int numberSpaces = 16-masterPassword.length();
         for(int i=0;i<numberSpaces;i++){
             masterPassword+=" ";
         }
-        System.out.println(masterPassword.length());
         byte[] keyValue = masterPassword.getBytes();
         System.gc();
         SecretKeySpec secretKeySpec = new SecretKeySpec(keyValue, ALGO);
