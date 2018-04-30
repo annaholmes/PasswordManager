@@ -69,15 +69,12 @@ public class Controller {
 
 	ArrayList<Tuple<String>> data;
 	
-	Map<String ,String> passworMap = new HashMap<String ,String>();
+	Map<String ,String> passwordMap = new HashMap<String ,String>();
 
 
 
 	@FXML
 	private void initialize() throws SQLException, Exception {
-		
-		
-		System.out.println("hi");
 		label.setCellValueFactory(cdf -> new SimpleStringProperty(cdf.getValue().getLabel()));
 		password.setCellValueFactory(cdf -> new SimpleStringProperty(cdf.getValue().getPassword()));
 		ContextMenu contextMenu = new ContextMenu();
@@ -113,7 +110,7 @@ public class Controller {
 					// TODO Auto-generated catch block
 					e.printStackTrace();
 				}
-				passworMap.remove(label);
+				passwordMap.remove(label);
 				try {
 					update();
 				} catch (Exception e) {
@@ -121,15 +118,8 @@ public class Controller {
 					e.printStackTrace();
 				}
 				
-				
-				
-				
-				
-				
-			}
-			
-			
-		});
+				}
+			});
 
 				
 		generator = new PasswordGenerator();
@@ -137,7 +127,7 @@ public class Controller {
 		database.createDatabase();
 		data = database.getAllPasswords();
 		for (Tuple t: data) {
-			passworMap.put((String)t.getLabel(), (String)t.getPassword());
+			passwordMap.put((String)t.getLabel(), (String)t.getPassword());
 			
 			table.getItems().add(new PasswordLabel ((String)t.getLabel(), hide));
 		}
@@ -186,7 +176,7 @@ public class Controller {
 		//        database.addPassword(new Tuple<String>());
 		try {
 			database.addPassword(new Tuple(labelField.getText(), passwordField.getText()));
-			passworMap.put(labelField.getText(), passwordField.getText());
+			passwordMap.put(labelField.getText(), passwordField.getText());
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -227,7 +217,7 @@ public class Controller {
 		// TODO password from clicked-on row
 		PasswordLabel selectedColunm = table.getSelectionModel().getSelectedItem();
 		String name = selectedColunm.getLabel();
-		selectedColunm.setPassword(passworMap.get(name));
+		selectedColunm.setPassword(passwordMap.get(name));
 		table.refresh();
 		System.out.println(selectedColunm.toString());
 		
