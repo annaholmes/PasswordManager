@@ -24,9 +24,8 @@ public class Tuple<E> {
     public void setPassword(E second) {
         this.password = second;
     }
-    
-    @Override
     public String toString() {
-    	return label.toString() + ", " + password.toString();
+    	return password.toString() + ", " + label.toString();
     }
+
 }

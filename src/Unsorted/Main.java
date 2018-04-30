@@ -7,20 +7,28 @@ import javafx.scene.Scene;
 import javafx.stage.Stage;
 
 public class Main extends Application {
+	private static Stage primaryStage; 
+	
+    
 
-    private static Stage stage;
 
     public static Stage getStage() {
-        return stage;
+        return Main.primaryStage;
+    }
+   
+
+    private static void setPrimaryStage(Stage stage) {
+        Main.primaryStage = stage;
     }
 
     @Override
     public void start(Stage primaryStage) throws Exception {
-        Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("GUI.fxml"));
+    		Main.primaryStage = primaryStage;
+        Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("startGui.fxml"));
         primaryStage.setTitle("Password Manager");
-        primaryStage.setScene(new Scene(root, 800, 600));
+        primaryStage.setScene(new Scene(root, 700, 400));
         primaryStage.show();
-        this.stage = primaryStage;
+        
     }
 
     public static void main(String[] args) {
