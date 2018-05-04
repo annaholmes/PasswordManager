@@ -17,15 +17,15 @@ public class Tuple<E> {
         return this.password;
     }
 
-    public void setLabel(E first) {
-        this.label = first;
+    public void setLabel(E label) {
+        this.label = label;
     }
 
-    public void setPassword(E second) {
-        this.password = second;
+    public void setPassword(E password) {
+        this.password = password;
     }
+    
     public String toString() {
     	return password.toString() + ", " + label.toString();
     }
-
 }
