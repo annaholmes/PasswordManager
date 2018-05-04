@@ -1,9 +1,9 @@
 package Controllers;
 import Data.Database;
+import OtherStuff.PasswordGenerator;
+import Controllers.EditGuiController;
 import Data.PasswordLabel;
 import Data.Tuple;
-import Passwords.PasswordGenerator;
-
 import com.sun.prism.impl.Disposer;
 import javafx.application.Platform;
 import javafx.beans.property.SimpleBooleanProperty;
@@ -17,7 +17,10 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.control.Button;
+import javafx.scene.control.MenuItem;
 import javafx.scene.control.TextField;
+import javafx.scene.input.MouseButton;
+import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
 import javafx.util.Callback;
 
@@ -97,7 +100,7 @@ public class PasswordTableController {
 			generator = new PasswordGenerator();
 
 			try {
-				database = new Database("Passwords");
+				database = new Database();
 				database.setPlainTextMasterPassword(plainTextMasterPassword);
 				instantiateTable();
 				setupTable();
@@ -117,17 +120,76 @@ public class PasswordTableController {
 	private void instantiateTable() throws Exception {
 		table.getItems().clear();
 		data = database.getAllPasswords();
+		
 		for (Tuple t: data) {
 			passwordMap.put((String)t.getLabel(), (String)t.getPassword());
 			isHiddenMap.put((String)t.getLabel(), true);
 			table.getItems().add(new PasswordLabel ((String)t.getLabel(), ((String)t.getPassword()), true));
 		}
+		
 
 	}
 
 	private void setupTable() {
 		label.setCellValueFactory(cdf -> new SimpleStringProperty(cdf.getValue().getLabel()));
 		password.setCellValueFactory(cdf -> new SimpleStringProperty(cdf.getValue().getPassword()));
+		ContextMenu contextMenu = new ContextMenu();
+		MenuItem edit = new MenuItem("Edit Password");
+		contextMenu.getItems().add(edit);
+		table.addEventHandler(MouseEvent.MOUSE_CLICKED,  new EventHandler<MouseEvent>() {
+			
+			@Override
+			public void handle(MouseEvent t) {
+				if(t.getButton() == MouseButton.SECONDARY) {
+					
+					contextMenu.show(table, t.getScreenX(), t.getScreenY());
+				}
+			}
+		});
+		
+		edit.setOnAction(new EventHandler<ActionEvent>() {
+			@Override
+			public void handle(ActionEvent event)   {
+				// TODO Auto-generated method stub
+				PasswordLabel selectedColunm = table.getSelectionModel().getSelectedItem();
+				String label = selectedColunm.getLabel();
+			
+			
+				
+				try {
+					Stage stage = new Stage();
+					Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("Resources/editPassword.fxml"));
+					Scene sceneLogin = new Scene(root);
+					stage.setScene(sceneLogin);
+					stage.showAndWait();
+					
+					//EditGuiController.getController(this.getClass());
+				} catch (IOException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+			
+				if (EditGuiController.getUpdate()) {
+				String newPassword = EditGuiController.getPass();
+				System.out.println("this" + newPassword);
+				passwordMap.replace(label, newPassword);
+				//passwordMap.clear();
+				String password = selectedColunm.getPassword();
+				Tuple<String> toEdit = new Tuple<String>(label, password);
+				System.out.println(toEdit.toString());
+				Tuple<String> updated = new Tuple<String>(label, newPassword);
+				System.out.println(updated);
+				try {
+					database.editData(toEdit, updated);
+				} catch (Exception e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+				}
+				}
+		});
+		
+		
 		// https://gist.github.com/abhinayagarwal/9735744
 
 		TableColumn show_col = new TableColumn<>();
