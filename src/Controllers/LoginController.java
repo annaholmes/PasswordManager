@@ -48,7 +48,7 @@ public class LoginController {
         badNews = new BadNews();
         // if database exists,
         if (validator.passwordExists()) {
-            database = new Database();
+            database = new Database("Passwords");
             if (!database.canLogin()) {
                 instructions.setTextFill(Color.RED);
                 instructions.setText("Password manager locked until \n" + database.prettyPrintNextLoginTime());
@@ -96,7 +96,7 @@ public class LoginController {
     }
 
     private void setupDatabase() throws SQLException, ClassNotFoundException {
-        database = new Database();
+        database = new Database("Passwords");
         database.createTables();
         String plainText = passwordField.getText();
         String hashedPassword = validator.hashPassword(passwordField.getText());

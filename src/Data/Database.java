@@ -12,22 +12,20 @@ import java.util.Calendar;
 public class Database {
 	private static Connection con;
 	private static Statement stat;
-
+	private static String plainTextMasterPassword;
 	private static int lockOutTime = 3;
 
     public static String getMasterPassword() {
         return plainTextMasterPassword;
     }
 
-    private static String plainTextMasterPassword;
-
     public static void setPlainTextMasterPassword(String password) {
         plainTextMasterPassword = password;
     }
 
-	public Database() throws ClassNotFoundException, SQLException {
+	public Database(String name) throws ClassNotFoundException, SQLException {
         Class.forName("org.sqlite.JDBC");
-        con = DriverManager.getConnection("jdbc:sqlite:Passwords");
+        con = DriverManager.getConnection("jdbc:sqlite:" + name);
         stat = con.createStatement();
     }
 	
@@ -36,7 +34,6 @@ public class Database {
         stat.execute("CREATE TABLE IF NOT EXISTS Master (Password TEXT, Tries INTEGER, Next_Attempt TIMESTAMP)");
     }
     
-
     public void setMasterTable(String hashedMasterPassword) throws SQLException {
     	PreparedStatement add = con.prepareStatement("INSERT INTO Master VALUES (?, ?, ?)");
     	add.setString(1, hashedMasterPassword);
@@ -164,8 +161,8 @@ public class Database {
         results.close();
     }
     
-    public static void dropDatabase() throws SQLException {
-    	stat.execute("DROP DATABASE Passwords");
+    public static void dropDatabase(String name) throws SQLException {
+    	stat.execute("DROP DATABASE " + name);
     	stat.close();
     	con.close();
     }

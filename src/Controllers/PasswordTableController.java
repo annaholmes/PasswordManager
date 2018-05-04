@@ -96,7 +96,7 @@ public class PasswordTableController {
 			generator = new PasswordGenerator();
 
 			try {
-				database = new Database();
+				database = new Database("Passwords");
 				database.setPlainTextMasterPassword(plainTextMasterPassword);
 				instantiateTable();
 				setupTable();

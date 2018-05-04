@@ -13,7 +13,7 @@ public class LoginValidation {
 
 
     public Boolean validate(String passwordAttempt) throws SQLException, ClassNotFoundException {
-        database = new Database();
+        database = new Database("Passwords");
         String correctHashedPassword = database.getHashedMasterPassword();
         System.out.println(correctHashedPassword);
         return BCrypt.checkpw(passwordAttempt, correctHashedPassword);
