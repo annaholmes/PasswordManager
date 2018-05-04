@@ -1,4 +1,4 @@
-package PasswordCracking;
+package Passwords;
 
 import java.io.BufferedReader;
 import java.io.FileReader;

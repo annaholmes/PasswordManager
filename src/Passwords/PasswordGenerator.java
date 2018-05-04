@@ -1,4 +1,4 @@
-package OtherStuff;
+package Passwords;
 import java.util.ArrayList;
 import java.util.Random;
 import java.util.stream.IntStream;

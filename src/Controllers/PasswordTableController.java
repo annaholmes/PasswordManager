@@ -1,8 +1,9 @@
 package Controllers;
 import Data.Database;
-import OtherStuff.PasswordGenerator;
 import Data.PasswordLabel;
 import Data.Tuple;
+import Passwords.PasswordGenerator;
+
 import com.sun.prism.impl.Disposer;
 import javafx.application.Platform;
 import javafx.beans.property.SimpleBooleanProperty;
